@@ -16,14 +16,14 @@
         <nav class="nav_header">
 
             <div class="logo">
-                <img src="media/logo.png" alt="">
+                <img src="media/logo.png" alt="Logo">
             </div>
 
             <div class="links_nav">
-                <div><li><a href="#">HOME</a></li></div>
-                <div><li><a href="#">HISTÓRIA</a></li></div>
-                <div><li><a href="#">MODALIDADES</a></li></div>
-                <div><li><a href="#">SOBRE-MIM</a></li></div>
+                <div><li><a href="#img_cabecalho">HOME</a></li></div>
+                <div><li><a href="#historia">HISTÓRIA</a></li></div>
+                <div><li><a href="#modalidades">MODALIDADES</a></li></div>
+                <div><li><a href="#sobre_mim">SOBRE MIM</a></li></div>
             </div>
 
             <div class="ajude_nav">
@@ -39,18 +39,20 @@
     <!--CONTEÚDO PRINCIPAL-->
     <main>
 
-        <div class="background_olho">
-            <img src="media/background_cabecalho.jpg" alt="Olho de um cavalo com zoom">
-        </div>
+        <section id="img_cabecalho">
+            <div class="background_olho">
+                <img src="media/background_cabecalho.jpg" alt="Olho de um cavalo com zoom">
+            </div>
+        </section>
 
-        <section class="secao_história">
+        <section id="historia" class="secao_história">
 
             <div class="historia_cavalo">
 
                 <div class="texto_historia">
 
                     <div>
-                        <h1>Conheça a Equitação</h1>
+                        <h1>Conheça os esportes Equestres</h1>
                     </div>
 
                     
@@ -59,15 +61,15 @@
                     </div>
                     
                     <div>
-                        <p>A equitação refere-se à prática de montar a cavalo. Envolve a habilidade de controlar e guiar um cavalo enquanto está montado, seja para fins esportivos, recreativos, terapêuticos ou profissionais. A equitação abrange uma ampla gama de atividades, desde corridas de cavalos e saltos a adestramento, cavalgadas recreativas, terapia com cavalos e trabalho em ranchos. </p>
+                        <p>Esportes equestres são aqueles em que a presença de equinos é indispensável para que o mesmo ocorra. Existem várias modalidades espalhadas pelo mundo e esse tipo de esporte faz parte até das olimpíadas. Podemos citar como exemplo de esporte equestre o salto, a prova de três tambores e as vaquejadas por exemplo.</p>
                     </div>
-                    
+
                     <div>
                         <h2>Origens:</h2>
                     </div>
 
                     <div>
-                        <p>Sabe-se que a origem da equitação é datada em cerca de 6000 anos atrás nas estepes da Ásia Central, quando o homem e o cavalo associaram-se em "simbiose" que permitiu ao homem o avanço das sociedades da época. As sociedades que não utilizaram o cavalo não evoluíram além da condição de cidade-estado.</p>
+                        <p>Os esportes equestres têm uma longa história, desde as corridas de quadrigas na Grécia Antiga até o hipismo moderno. Hoje, eles englobam diversas disciplinas praticadas em todo o mundo, desde o adestramento até as corridas de cavalos. É uma tradição que continua a emocionar e unir pessoas de todas as idades.</p>
                     </div>
 
                 </div>
@@ -80,48 +82,76 @@
 
         </section>
 
-        <section class="secao_modalidades">
-
-            <div class="carrossel">
-
-                <div class="slides">
-                    <!--RADIO BUTTONS-->
-                    <input type="radio" name="radio-btn" id="radio_1">
-                    <input type="radio" name="radio-btn" id="radio_2">
-                    <input type="radio" name="radio-btn" id="radio_3">
-                    <input type="radio" name="radio-btn" id="radio_4">
-                    <!--FIM RADIO BUTTONS-->
-
-                    <!--IMAGENS DO CARROSSEL-->
-                    <div class="slide first">
-                        <img src="media/prova_do_tambor.jpg" alt="Cavaleiro e cavalo na prova do tambor">
-                    </div>
-                    <div class="slide">
-                        <img src="media/Hipismo.jpg" alt="Cavaleiro e cavalo em uma competição de Hipismo">
-                    </div>
-                    <div class="slide">
-                        <img src="media/Corrida.jpg" alt="Jóqueis disputando uma corrida a cavalo">
-                    </div>
-                    <div class="slide">
-                        <img src="media/Doma_Clássica.png" alt="Cavaleiro e cavalo na prova do tambor">
-                    </div>
-                    <!--FIM IMAGENS DO CARROSSEL-->
-
-                    <!--NAVEGAÇÃO AUTOMÁTICA-->
-                    <div class="navegacao_automatica">
-                        <div class="auto_btn1"></div>
-                        <div class="auto_btn2"></div>
-                        <div class="auto_btn3"></div>
-                        <div class="auto_btn4"></div>
-                    </div>
-                    <!--FIM DA NAVEGAÇÃO AUTOMÁTICA-->
+        <section id="modalidades" class="secao_modalidades">
+            
+            <div class="modalidades_equestres">
+                <div>
+                    <h1>Modalidades</h1>
                 </div>
+                <div class="carrossel">
+                    <div class="slides">
+                        <!--RADIO BUTTONS-->
+                        <input type="radio" name="radio-btn" id="radio_1">
+                        <input type="radio" name="radio-btn" id="radio_2">
+                        <input type="radio" name="radio-btn" id="radio_3">
+                        <input type="radio" name="radio-btn" id="radio_4">
+                        <!--FIM RADIO BUTTONS-->
+                        <!--IMAGENS DO CARROSSEL-->
+                        <div class="slide first">
+                            <img src="media/prova_do_tambor.jpg" alt="Cavaleiro e cavalo na prova do tambor">
+                        </div>
+                        <div class="slide">
+                            <img src="media/Hipismo.jpg" alt="Cavaleiro e cavalo em uma competição de Hipismo">
+                        </div>
+                        <div class="slide">
+                            <img src="media/Corrida.jpg" alt="Jóqueis disputando uma corrida a cavalo">
+                        </div>
+                        <div class="slide">
+                            <img src="media/Doma_Clássica.png" alt="Cavaleiro e cavalo na prova do tambor">
+                        </div>
+                        <!--FIM IMAGENS DO CARROSSEL-->
+                        <!--NAVEGAÇÃO AUTOMÁTICA-->
+                        <div class="navegacao_automatica">
+                            <div class="auto_btn1"></div>
+                            <div class="auto_btn2"></div>
+                            <div class="auto_btn3"></div>
+                            <div class="auto_btn4"></div>
+                        </div>
+                        <!--FIM DA NAVEGAÇÃO AUTOMÁTICA-->
+                    </div>
+                    <div class="navegacao_manual">
+                        <label for="radio_1" class="manual_btn"></label>
+                        <label for="radio_2" class="manual_btn"></label>
+                        <label for="radio_3" class="manual_btn"></label>
+                        <label for="radio_4" class="manual_btn"></label>
+                    </div>
+                </div>
+            </div>
 
-                <div class="navegacao_manual">
-                    <label for="radio_1" class="manual_btn"></label>
-                    <label for="radio_2" class="manual_btn"></label>
-                    <label for="radio_3" class="manual_btn"></label>
-                    <label for="radio_4" class="manual_btn"></label>
+        </section>
+
+        <section id="sobre_mim" class="secao_sobre_mim">
+            <div id="titulo_sobre_mim">
+                <h1>SOBRE MIM</h1>
+            </div>
+            <div class="meus_dados">
+
+                <div class="perfil">
+                    <div>
+                        <img id="img_perfil" src="media/perfil.jpg" alt="Minha foto de perfil montado a cavalo">
+                    </div>
+                    <div class="texto_perfil">
+                        <h1>QUEM SOU EU?</h1>
+                        <p>Apenas um jovem tentando aprender com os meus erros para me tornar um homem e um profissional melhor do que fui ontem.</p>
+                    </div>
+                </div>
+                    
+                <div class="meus_valores">
+                    <div class="img_valores">
+                        <div><img src="media/lealdade.png" alt="Ícone Lealdade"><p>LEALDADE</p></div>
+                        <div><img src="media/humildade.png" alt="Ícone Humildade"><p>HUMILDADE</p></div>
+                        <div><img src="media/empatia.png" alt="Ícone Justiça"><p>EMPATIA</p></div>
+                    </div>
                 </div>
 
             </div>
@@ -130,6 +160,16 @@
 
     </main>
     <!--FIM CONTEÚDO PRINCIPAL-->
+
+    <!--RODAPÉ-->
+    <footer>
+        <div class="contato">
+            <div><img src="media/facebook.png" alt="Facebook"></div>
+            <div><img src="media/instagram.png" alt="Instagram"></div>
+            <div><img src="media/Linkedin.png" alt="Linkedin"></div>
+            <div><img src="media/github.png" alt="GitHub"></div>
+        </div>
+    </footer>
 
 </body>
 </html>

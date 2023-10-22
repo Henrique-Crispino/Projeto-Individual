@@ -2,8 +2,8 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   var contador_carrossel = 1;
-  const radioIDs = ["radio_1", "radio_2", "radio_3", "radio_4"];
-  document.getElementById(radioIDs[0]).checked = true;
+  const radio_ids = ["radio_1", "radio_2", "radio_3", "radio_4"];
+  document.getElementById(radio_ids[0]).checked = true;
 
   setInterval(function () {
     proxima_img_carrossel();
@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function proxima_img_carrossel() {
     contador_carrossel++;
-    if (contador_carrossel > radioIDs.length) {
+    if (contador_carrossel > radio_ids.length) {
       contador_carrossel = 1;
     }
-    document.getElementById(radioIDs[contador_carrossel - 1]).checked = true;
+    document.getElementById(radio_ids[contador_carrossel - 1]).checked = true;
   }
 });
 

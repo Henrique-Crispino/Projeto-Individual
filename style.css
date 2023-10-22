@@ -7,10 +7,14 @@ body {
   background-color: #571903;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*CABEÇALHO*/
 header {
   width: 100%;
-  height: 100px;
+  height: 80px;
   position: fixed;
   background-color: none;
 }
@@ -90,17 +94,13 @@ li {
 /*FIM CABEÇALHO*/
 
 /*TELA DE HISTÓRIA*/
-.secao_historia {
-  height: 500px;
-  width: 100%;
-}
-
 .historia_cavalo {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   background-color: #571903;
+  height: 110vh;
 }
 
 .texto_historia {
@@ -111,6 +111,7 @@ li {
   width: 40%;
   height: 100%;
   gap: 1rem;
+  justify-content: center;
 }
 
 .texto_historia h1 {
@@ -130,22 +131,30 @@ li {
 
 /*MODALIDADES*/
 .secao_modalidades {
-  height: 500px;
+  height: 115vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #F2E1C2;
+}
+.modalidades_equestres {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  text-align: center;
 }
 .carrossel {
   margin: 0 auto;
-  width: 800px;
-  height: 400px;
+  width: 1000px;
+  height: 500px;
   overflow: hidden;
 }
 
 .slides {
   width: 400%;
-  height: 400px;
+  height: 500px;
   display: flex;
 }
 
@@ -155,13 +164,12 @@ li {
 
 .slide {
   width: 25%;
-  position: relative;
   transition: 2s;
 }
 
 .navegacao_manual {
-  position: absolute;
-  width: 800px;
+  position: static;
+  width: 1000px;
   margin-top: -40px;
   display: flex;
   justify-content: center;
@@ -208,9 +216,9 @@ li {
 }
 
 .navegacao_automatica {
-  position: absolute;
-  width: 800px;
-  margin-top: 360px;
+  position: fixed;
+  width: 1000px;
+  margin-top: 460px;
   display: flex;
   justify-content: center;
 } 
@@ -235,3 +243,86 @@ li {
   background-color: #FFF;
 }
 /*FIM MODALIDADES*/
+
+/*SOBRE MIM*/
+.secao_sobre_mim {
+  height: 110vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #571903;
+  color: white;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meus_dados {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 10rem;
+}
+
+.perfil {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 220px;
+  border: solid 1px #FFF;
+  padding: 1%;
+  border-radius: 25px;
+}
+
+.texto_perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.meus_valores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 220px;
+  border: solid 1px #FFF;
+  padding: 1%;
+  border-radius: 25px;
+}
+
+.img_valores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.img_valores P {
+  text-align: center;
+}
+
+/*FIM SOBRE MIM*/
+
+/*RODAPÉ*/
+
+footer {
+  background-color: white;
+  height: 10vh;
+}
+
+.contato {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 6px;
+}
