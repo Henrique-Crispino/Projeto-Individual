@@ -25,7 +25,7 @@ main {
 
 .estilo_container {
     width: 20%;
-  background-color: #8c4e2acc;
+  background-color: #8c4e2ae7;
   border: 1px solid #fff;
   border-radius: 25px;
   display: flex;
@@ -43,6 +43,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  text-align: left;
 }
 
 .inputs_formulario {
@@ -52,7 +53,15 @@ main {
 
 input {
     border-radius: 5px;
-    background-color: #ffffff4b;
+    text-align: center;
+    color: #000;
+    caret-color: #000;
+    height: 30px;
+}
+
+input::placeholder {
+  color: #0000008e;
+  text-align: center;
 }
 
 .botao_formulario {
@@ -70,4 +79,17 @@ input {
     background-color: #ffffff4b;
     cursor: pointer;
     transition: 1s;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+a:hover {
+  transition: 1s;
+  background-color: #ffffff4b;
+  border: solid 1px #fff;
+  border-radius: 25px;
 }
