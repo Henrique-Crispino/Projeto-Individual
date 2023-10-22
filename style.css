@@ -115,6 +115,10 @@ li {
   height: 110vh;
 }
 
+.fundo_historia {
+  height: 410px;
+}
+
 .texto_historia {
   width: 60%;
   display: flex;
