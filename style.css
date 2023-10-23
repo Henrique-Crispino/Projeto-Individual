@@ -439,7 +439,9 @@ li {
   border: solid 1px #000;
   padding: 1%;
   border-radius: 25px;
+  text-align: center;
 }
+
 
 .img_valores {
   display: flex;

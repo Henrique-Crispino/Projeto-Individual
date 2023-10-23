@@ -4,9 +4,10 @@
 }
 
 main {
-  width: 100%;
   height: 100vh;
-  background-image: url(media/pexels-jose-ricardo-barraza-morachis-1462363\ \(2\).jpg);
+  background-image: url(media/background.jpg);
+  background-position: center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,12 +21,12 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: end;
-  margin-right: 10%;
+  align-items: left;
+  margin-left: 10%;
 }
 
 .estilo_container {
-    width: 20%;
+  width: 20%;
   background-color: #8c4e2ae7;
   border: 1px solid #fff;
   border-radius: 25px;
