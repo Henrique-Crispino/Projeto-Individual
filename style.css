@@ -182,7 +182,6 @@ li {
   width: 20%;
   height: 500px;
   bottom: 0;
-  transition: 0.2s ease;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -202,8 +201,8 @@ li {
 .cavalo .info h1 {
   width: 350px;
   opacity: 0;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: bold;
   transition: 0.1s ease;
   color: #000;
   text-align: center;
@@ -214,6 +213,10 @@ li {
   opacity: 0;
   transition: 0.1s ease;
   color: #000;
+}
+
+.cavalo:hover {
+  width: 450px;
 }
 
 .cavalo:hover .info h1 {
@@ -228,9 +231,6 @@ li {
   transition-delay: 0.1s;
 }
 
-.cavalo:hover {
-  width: 450px;
-}
 
 .cavalo:hover .info {
   background: linear-gradient(0deg, #dee9ec 75%, rgba(0, 212, 255, 0) 100%);
@@ -442,7 +442,6 @@ li {
   text-align: center;
 }
 
-
 .img_valores {
   display: flex;
   flex-direction: row;
@@ -453,6 +452,10 @@ li {
 
 .img_valores P {
   text-align: center;
+}
+
+.citacoes {
+  display: none;
 }
 
 /*FIM SOBRE MIM*/

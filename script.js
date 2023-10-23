@@ -19,3 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*FIM CARROSSEL*/
+
+/*CITAÇÕES*/
+
+function hideCitacoes(image) {
+  var citacoes = image.parentNode.querySelector('.citacoes');
+  citacoes.style.display = 'none';
+}
+
+function showCitacoes(image) {
+  var citacoes = image.parentNode.querySelector('.citacoes');
+  citacoes.style.display = 'block';
+}
