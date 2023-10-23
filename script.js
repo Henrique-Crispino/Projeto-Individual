@@ -22,12 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*CITAÇÕES*/
 
-function hideCitacoes(image) {
+function esconder_citacoes(image) {
   var citacoes = image.parentNode.querySelector('.citacoes');
   citacoes.style.display = 'none';
 }
 
-function showCitacoes(image) {
+function mostrar_citacoes(image) {
   var citacoes = image.parentNode.querySelector('.citacoes');
   citacoes.style.display = 'block';
 }
+
+/*FIM CITAÇÕES*/
