@@ -1,6 +1,23 @@
+@font-face {
+  font-family: "ITC Fenice-Regular";
+  src: url("media/itcfenice.ttf") format("truetype");
+}
+
 * {
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  font-family: "ITC Fenice-Regular";
+}
+
+h3 {
+  font-family: "ITC Fenice-Regular";
+}
+
+p {
+  font-family: "ITC Fenice-Regular";
 }
 
 main {
@@ -54,11 +71,11 @@ main {
 }
 
 input {
-    border-radius: 5px;
-    text-align: center;
-    color: #000;
-    caret-color: #000;
-    height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  color: #000;
+  caret-color: #000;
+  height: 30px;
 }
 
 input::placeholder {
@@ -78,9 +95,9 @@ input::placeholder {
 }
 
 .botao_formulario:hover {
-    background-color: #ffffff4b;
-    cursor: pointer;
-    transition: 1s;
+  background-color: #ffffff4b;
+  cursor: pointer;
+  transition: 1s;
 }
 
 a {

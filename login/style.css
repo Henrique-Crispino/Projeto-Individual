@@ -1,6 +1,23 @@
+@font-face {
+  font-family: "ITC Fenice-Regular";
+  src: url("media/itcfenice.ttf") format("truetype");
+}
+
 * {
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  font-family: "ITC Fenice-Regular";
+}
+
+h3 {
+  font-family: "ITC Fenice-Regular";
+}
+
+p {
+  font-family: "ITC Fenice-Regular";
 }
 
 main {
