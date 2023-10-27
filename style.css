@@ -1,33 +1,12 @@
-@font-face {
-  font-family: "ITC Fenice-Regular";
-  src: url("media/itcfenice.ttf") format("truetype");
-}
-
 * {
   margin: 0;
   padding: 0;
   gap: 0;
 }
+
 body {
   background-color: #571903;
   overflow-x: hidden;
-  font-family: "ITC Fenice-Regular", sans-serif;
-}
-
-h1 {
-  font-family: "ITC Fenice-Regular", sans-serif;
-}
-
-h2 {
-  font-family: "ITC Fenice-Regular", sans-serif;
-}
-
-h3 {
-  font-family: "ITC Fenice-Regular", sans-serif;
-}
-
-p {
-  font-family: "ITC Fenice-Regular", sans-serif;
 }
 
 html {
@@ -67,7 +46,7 @@ header {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   background-color: rgb(0, 0, 0);
 }
@@ -102,29 +81,28 @@ header {
   border-bottom: solid 1px white;
 }
 
-.ajude_nav {
+.login_cadastro {
   display: flex;
   flex-direction: row;
   width: 25%;
   height: 40%;
   align-items: center;
-  justify-content: space-evenly;
   text-align: center;
 }
 
-.ajude_nav a {
+.login_cadastro a {
   width: 100%;
-  padding: 5%;
+  padding: 8%;
   border-radius: 25px;
   border: solid 1px white;
 }
 
-.ajude_nav a:hover {
+.login_cadastro a:hover {
   background-color: #ffffff4b;
   transition: 0.5s;
 }
 
-.ajude_nav div {
+.login_cadastro div {
   width: 40%;
 }
 a {
@@ -181,7 +159,7 @@ li {
 
 .secao_racas {
   height: 115vh;
-  width: 100%;
+  width: 102.5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,7 +185,7 @@ li {
   align-items: center;
   justify-content: space-evenly;
   width: 80%;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .cavalo {
@@ -296,7 +274,7 @@ li {
 /*MODALIDADES*/
 .secao_modalidades {
   height: 115vh;
-  width: 100%;
+  width: 102.5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -306,7 +284,7 @@ li {
 .modalidades_equestres {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
   text-align: center;
 }
@@ -418,7 +396,7 @@ li {
 /*SOBRE MIM*/
 .secao_sobre_mim {
   height: 80vh;
-  width: 100%;
+  width: 102.5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -430,6 +408,8 @@ li {
 
 #titulo_sobre_mim {
   font-size: 50px;
+  display: flex;
+  justify-content: start;
 }
 
 .meus_dados {
@@ -500,6 +480,7 @@ footer {
 }
 
 .contato {
+  width: 102.5%;
   display: flex;
   flex-direction: row;
   align-items: center;
