@@ -104,6 +104,64 @@ body {
     margin-bottom: 10px;
     cursor: pointer;
     text-transform: capitalize;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.quiz-box .option-container .option.ja_respondido {
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.quiz-box .option-container .option.correto::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    z-index: -1;
+    animation: SlideInLeft .5s ease forwards;
+}
+
+.quiz-box .option-container .option.incorreto::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    z-index: -1;
+    animation: SlideInLeft .5s ease forwards;
+}
+
+@keyframes SlideInLeft{
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.quiz-box .option-container .option.correto {
+    color: #fff;
+}
+
+.quiz-box .option-container .option.incorreto {
+    color: #fff;
 }
 
 .quiz-box .btn {
