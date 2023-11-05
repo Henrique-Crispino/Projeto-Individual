@@ -1,13 +1,13 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 main {
+  width: 100%;
   height: 100vh;
-  background-image: url(media/background.jpg);
-  background-position: center;
-  background-size: cover;
+  background-image: url(media/pexels-jose-ricardo-barraza-morachis-1462363\ \(2\).jpg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,12 +21,12 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: left;
-  margin-left: 10%;
+  align-items: end;
+  margin-right: 10%;
 }
 
 .estilo_container {
-  width: 21%;
+   width: 25%;
   background-color: #8c4e2ae7;
   border: 1px solid #fff;
   border-radius: 25px;
@@ -54,11 +54,12 @@ main {
 }
 
 input {
-  border-radius: 5px;
-  text-align: center;
-  color: #000;
-  caret-color: #000;
-  height: 30px;
+  width: 250px;
+    border-radius: 5px;
+    text-align: center;
+    color: #000;
+    caret-color: #000;
+    height: 30px;
 }
 
 input::placeholder {
@@ -70,7 +71,7 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 81%;
   height: 50px;
   text-align: center;
   border: solid 1px #fff;
@@ -78,9 +79,9 @@ input::placeholder {
 }
 
 .botao_formulario:hover {
-  background-color: #ffffff4b;
-  cursor: pointer;
-  transition: 1s;
+    background-color: #ffffff4b;
+    cursor: pointer;
+    transition: 1s;
 }
 
 a {

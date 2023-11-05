@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Quiz</title>
+</head>
+
+<body>
+
+    <div class="home-box custom-box hide">
+
+    <h3>Instrução:</h3>
+    <p>Número total de questões: <span class="total-question">5</span></p>
+    <button type="button" class="btn">Iniciar Quiz</button>
+
+    </div>
+
+    <div class="quiz-box custom-box hide">
+
+        <div class="question-number">
+            Questão 1 de 5
+        </div>
+
+        <div class="question-text">
+            Qual mês vem depois de junho?
+        </div>
+
+        <div class="option-container">
+            <div class="option">Julho</div>
+            <div class="option">Maio</div>
+            <div class="option">Setembro</div>
+            <div class="option">Agosto</div>
+        </div>
+
+        <div class="next-question-btn">
+            <button type="button" class="btn">Próxima questão</button>
+        </div>
+
+        <div class="answers-indicator">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        
+    </div>
+
+    <div class="result-box custom-box hide">
+        <h1>Resultado do Quiz</h1>
+        <table>
+
+            <tr>
+                <td>Número de questões:</td>
+                <td><span class="total-question">5</span></td>
+            </tr>
+
+            <tr>
+                <td>Tentativa</td>
+                <td><span class="total-attempt">4</span></td>
+            </tr>
+
+            <tr>
+                <td>Acertos:</td>
+                <td><span class="total-correct">3</span></td>
+            </tr>
+
+            <tr>
+                <td>Errados:</td>
+                <td><span class="total-wrong">2</span></td>
+            </tr>
+
+            <tr>
+                <td>Aproveitamento:</td>
+                <td><span class="percentage">60.00%</span></td>
+            </tr>
+
+            <tr>
+                <td>Seu placar total:</td>
+                <td><span class="total-score">3 / 5</span></td>
+            </tr>
+
+        </table>
+
+        <button type="button" class="btn">Tente novamente</button>
+        <button type="button" class="btn">Início</button>
+
+    </div>
+
+</body>
+
+</html>
