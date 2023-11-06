@@ -62,7 +62,7 @@ function nova_questao() {
 function pegar_resultado(element) {
   var id = Number(element.id);
 
-  if (id === questao_atual.answer) {
+  if (id === questao_atual.resposta) {
     element.classList.add("correto");
     atualizar_indicador_resposta("correto");
     respostas_corretas++;
@@ -72,7 +72,7 @@ function pegar_resultado(element) {
 
     var opcao_len = container_opcoes.children.length;
     for (let i = 0; i < opcao_len; i++) {
-      if (Number(container_opcoes.children[i].id) === questao_atual.answer) {
+      if (Number(container_opcoes.children[i].id) === questao_atual.resposta) {
         container_opcoes.children[i].classList.add("correto");
       }
     }

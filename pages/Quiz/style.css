@@ -78,16 +78,16 @@ body {
   display: inline-block;
 }
 
-.container_quiz .question-number,
+.container_quiz .num_questao,
 .container_quiz .texto_questao,
 .container_quiz .container_opcoes,
-.container_quiz .next-question-btn,
+.container_quiz .btn_prox_questao,
 .container_quiz .indicador_respostas {
   width: 100%;
   float: left;
 }
 
-.container_quiz .question-number {
+.container_quiz .num_questao {
   font-size: 18px;
   color: #009688;
   font-weight: 600;
