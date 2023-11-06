@@ -1,167 +1,162 @@
-var num_questao = document.querySelector(".question-number");
-var texto_questao = document.querySelector(".question-text");
-var optionContainer = document.querySelector(".option-container");
-var answersIndicatorContainer = document.querySelector(".answers-indicator");
-var homeBox = document.querySelector(".home-box");
-var quizBox = document.querySelector(".quiz-box");
-var resultBox = document.querySelector(".result-box");
+var num_questao = document.querySelector(".num_questao");
+var texto_questao = document.querySelector(".texto_questao");
+var container_opcoes = document.querySelector(".container_opcoes");
+var container_indicador_respostas = document.querySelector(".indicador_respostas");
+var container_casa = document.querySelector(".container_casa");
+var container_quiz = document.querySelector(".container_quiz");
+var container_resultado = document.querySelector(".container_resultado");
 
 var limite_de_questoes = 5;
-var questionCounter = 0;
-var currentQuestion;
-var availableQuestions = [];
-var availableOptions = [];
-var correctAnswers = 0;
-var attempt = 0;
+var contador_questoes = 0;
+var questao_atual;
+var questoes_disponiveis = [];
+var opcoes_disponiveis = [];
+var respostas_corretas = 0;
+var tentativas = 0;
 
-function setAvailableQuestions() {
-  var totalQuestion = quiz.length;
+function set_questoes_disponiveis() {
+  var total_questoes = quiz.length;
 
-  for (var i = 0; i < totalQuestion; i++) {
-    availableQuestions.push(quiz[i]);
+  for (var i = 0; i < total_questoes; i++) {
+    questoes_disponiveis.push(quiz[i]);
   }
 }
 
-function getNewQuestion() {
-  num_questao.innerHTML = `Questão ${questionCounter + 1} de ${limite_de_questoes}`;
+function nova_questao() {
+  num_questao.innerHTML = `Questão ${contador_questoes + 1} de ${limite_de_questoes}`;
 
-  var questionIndex =
-    availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
-  currentQuestion = questionIndex;
-  texto_questao.innerHTML = currentQuestion.q;
+  var indice_questoes = questoes_disponiveis[Math.floor(Math.random() * questoes_disponiveis.length)];
+  questao_atual = indice_questoes;
+  texto_questao.innerHTML = questao_atual.q;
 
-  var index1 = availableQuestions.indexOf(questionIndex);
-  availableQuestions.splice(index1, 1);
+  var index1 = questoes_disponiveis.indexOf(indice_questoes);
+  questoes_disponiveis.splice(index1, 1);
 
-  var optionLen = currentQuestion.options.length;
+  var opcao_len = questao_atual.options.length;
 
-  for (var i = 0; i < optionLen; i++) {
-    availableOptions.push(i);
+  for (var i = 0; i < opcao_len; i++) {
+    opcoes_disponiveis.push(i);
   }
 
-  optionContainer.innerHTML = "";
-  var animationDelay = 0.2;
+  container_opcoes.innerHTML = "";
+  var animation_delay = 0.2;
 
-  for (var i = 0; i < optionLen; i++) {
-    var optonIndex =
-      availableOptions[Math.floor(Math.random() * availableOptions.length)];
+  for (var i = 0; i < opcao_len; i++) {
+    var optonIndex = opcoes_disponiveis[Math.floor(Math.random() * opcoes_disponiveis.length)];
 
-    var index2 = availableOptions.indexOf(optonIndex);
-    availableOptions.splice(index2, 1);
+    var index2 = opcoes_disponiveis.indexOf(optonIndex);
+    opcoes_disponiveis.splice(index2, 1);
 
     var option = document.createElement("div");
-    option.innerHTML = currentQuestion.options[optonIndex];
+    option.innerHTML = questao_atual.options[optonIndex];
     option.id = optonIndex;
-    option.style.animationDelay = animationDelay + "s";
-    animationDelay = animationDelay + 0.2;
+    option.style.animation_delay = animation_delay + "s";
+    animation_delay = animation_delay + 0.2;
     option.className = "option";
-    optionContainer.appendChild(option);
-    option.setAttribute("onclick", "getResult(this)");
+    container_opcoes.appendChild(option);
+    option.setAttribute("onclick", "pegar_resultado(this)");
   }
-
-  questionCounter++;
+  contador_questoes++;
 }
 
-function getResult(element) {
+function pegar_resultado(element) {
   var id = Number(element.id);
 
-  if (id === currentQuestion.answer) {
+  if (id === questao_atual.answer) {
     element.classList.add("correto");
     updateAnswerIndicator("correto");
-    correctAnswers++;
+    respostas_corretas++;
   } else {
     element.classList.add("incorreto");
     updateAnswerIndicator("incorreto");
 
-    var optionLen = optionContainer.children.length;
-    for (let i = 0; i < optionLen; i++) {
-      if (Number(optionContainer.children[i].id) === currentQuestion.answer) {
-        optionContainer.children[i].classList.add("correto");
+    var opcao_len = container_opcoes.children.length;
+    for (let i = 0; i < opcao_len; i++) {
+      if (Number(container_opcoes.children[i].id) === questao_atual.answer) {
+        container_opcoes.children[i].classList.add("correto");
       }
     }
   }
-  attempt++;
-  unclickableOptions();
+  tentativas++;
+  opcoes_nao_clicaveis();
 }
 
-function unclickableOptions() {
-  var optionLen = optionContainer.children.length;
+function opcoes_nao_clicaveis() {
+  var opcao_len = container_opcoes.children.length;
 
-  for (var i = 0; i < optionLen; i++) {
-    optionContainer.children[i].classList.add("ja_respondido");
+  for (var i = 0; i < opcao_len; i++) {
+    container_opcoes.children[i].classList.add("ja_respondido");
   }
 }
 
-function answersIndicator() {
-  answersIndicatorContainer.innerHTML = "";
-  var totalQuestion = limite_de_questoes;
+function indicador_respostas() {
+  container_indicador_respostas.innerHTML = "";
+  var total_questoes = limite_de_questoes;
 
-  for (var i = 0; i < totalQuestion; i++) {
+  for (var i = 0; i < total_questoes; i++) {
     var indicator = document.createElement("div");
-    answersIndicatorContainer.appendChild(indicator);
+    container_indicador_respostas.appendChild(indicator);
   }
 }
 
 function updateAnswerIndicator(markType) {
-  answersIndicatorContainer.children[questionCounter - 1].classList.add(
+  container_indicador_respostas.children[contador_questoes - 1].classList.add(
     markType
   );
 }
 
 function next() {
-  if (questionCounter === limite_de_questoes) {
+  if (contador_questoes === limite_de_questoes) {
     quizOver();
   } else {
-    getNewQuestion();
+    nova_questao();
   }
 }
 
 function quizOver() {
-  quizBox.classList.add("hide");
-  resultBox.classList.remove("hide");
+  container_quiz.classList.add("hide");
+  container_resultado.classList.remove("hide");
   quizResult();
 }
 
 function quizResult() {
-  var porcentagem = (correctAnswers / limite_de_questoes) * 100;
-  resultBox.querySelector(".total-question").innerHTML = limite_de_questoes;
-  resultBox.querySelector(".total-attempt").innerHTML = attempt;
-  resultBox.querySelector(".total-correct").innerHTML = correctAnswers;
-  resultBox.querySelector(".total-wrong").innerHTML = attempt - correctAnswers;
-  resultBox.querySelector(".percentage").innerHTML =
-    porcentagem.toFixed(2) + "%";
-  resultBox.querySelector(".total-score").innerHTML =
-    correctAnswers + " / " + limite_de_questoes;
+  var porcentagem = (respostas_corretas / limite_de_questoes) * 100;
+  container_resultado.querySelector(".total_questoes").innerHTML = limite_de_questoes;
+  container_resultado.querySelector(".total_tentativas").innerHTML = tentativas;
+  container_resultado.querySelector(".total_corretas").innerHTML = respostas_corretas;
+  container_resultado.querySelector(".total_erradas").innerHTML = tentativas - respostas_corretas;
+  container_resultado.querySelector(".porcentagem").innerHTML = porcentagem.toFixed(2) + "%";
+  container_resultado.querySelector(".total_score").innerHTML = respostas_corretas + " / " + limite_de_questoes;
 }
 
 function resetar_quiz() {
-    questionCounter = 0;
-    correctAnswers = 0;
-    attempt = 0;
-    availableQuestions = [];
+    contador_questoes = 0;
+    respostas_corretas = 0;
+    tentativas = 0;
+    questoes_disponiveis = [];
 }
 
 function tentar_novamente() {
-  resultBox.classList.add("hide");
-  quizBox.classList.remove("hide");
+  container_resultado.classList.add("hide");
+  container_quiz.classList.remove("hide");
   resetar_quiz();
   iniciar_quiz();
 }
 
 function volte_inicio() {
-    resultBox.classList.add("hide");
-    homeBox.classList.remove("hide");
+    container_resultado.classList.add("hide");
+    container_casa.classList.remove("hide");
     resetar_quiz()
 }
 
 function iniciar_quiz() {
-  homeBox.classList.add("hide");
-  quizBox.classList.remove("hide");
-  setAvailableQuestions();
-  getNewQuestion();
-  answersIndicator();
+  container_casa.classList.add("hide");
+  container_quiz.classList.remove("hide");
+  set_questoes_disponiveis();
+  nova_questao();
+  indicador_respostas();
 };
 
 window.onload = function () {
-    homeBox.querySelector(".total-question").innerHTML = limite_de_questoes;
+    container_casa.querySelector(".total_questoes").innerHTML = limite_de_questoes;
 }
