@@ -12,7 +12,7 @@ body {
   outline: none;
 }
 
-.custom-box {
+.container_personalizado {
   max-width: 700px;
   background-color: #ffff;
   margin: 40px auto;
@@ -31,14 +31,14 @@ body {
     }
 }
 
-.custom-box::before,
-.custom-box::after {
+.container_personalizado::before,
+.container_personalizado::after {
   content: "";
   clear: both;
   display: table;
 }
 
-.custom-box.hide {
+.container_personalizado.hide {
   display: none;
 }
 

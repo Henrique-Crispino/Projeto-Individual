@@ -105,21 +105,21 @@ function updateAnswerIndicator(markType) {
   );
 }
 
-function next() {
+function proxima() {
   if (contador_questoes === limite_de_questoes) {
-    quizOver();
+    fim_quiz();
   } else {
     nova_questao();
   }
 }
 
-function quizOver() {
+function fim_quiz() {
   container_quiz.classList.add("hide");
   container_resultado.classList.remove("hide");
-  quizResult();
+  resultado_quiz();
 }
 
-function quizResult() {
+function resultado_quiz() {
   var porcentagem = (respostas_corretas / limite_de_questoes) * 100;
   container_resultado.querySelector(".total_questoes").innerHTML = limite_de_questoes;
   container_resultado.querySelector(".total_tentativas").innerHTML = tentativas;
