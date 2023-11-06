@@ -6,7 +6,7 @@ var container_casa = document.querySelector(".container_casa");
 var container_quiz = document.querySelector(".container_quiz");
 var container_resultado = document.querySelector(".container_resultado");
 
-var limite_de_questoes = 5;
+var limite_de_questoes = 10;
 var contador_questoes = 0;
 var questao_atual;
 var questoes_disponiveis = [];
@@ -32,7 +32,7 @@ function nova_questao() {
   var index1 = questoes_disponiveis.indexOf(indice_questoes);
   questoes_disponiveis.splice(index1, 1);
 
-  var opcao_len = questao_atual.options.length;
+  var opcao_len = questao_atual.opcoes.length;
 
   for (var i = 0; i < opcao_len; i++) {
     opcoes_disponiveis.push(i);
@@ -47,14 +47,14 @@ function nova_questao() {
     var index2 = opcoes_disponiveis.indexOf(optonIndex);
     opcoes_disponiveis.splice(index2, 1);
 
-    var option = document.createElement("div");
-    option.innerHTML = questao_atual.options[optonIndex];
-    option.id = optonIndex;
-    option.style.animation_delay = animation_delay + "s";
+    var opcao = document.createElement("div");
+    opcao.innerHTML = questao_atual.opcoes[optonIndex];
+    opcao.id = optonIndex;
+    opcao.style.animation_delay = animation_delay + "s";
     animation_delay = animation_delay + 0.2;
-    option.className = "option";
-    container_opcoes.appendChild(option);
-    option.setAttribute("onclick", "pegar_resultado(this)");
+    opcao.className = "opcao";
+    container_opcoes.appendChild(opcao);
+    opcao.setAttribute("onclick", "pegar_resultado(this)");
   }
   contador_questoes++;
 }
@@ -64,11 +64,11 @@ function pegar_resultado(element) {
 
   if (id === questao_atual.answer) {
     element.classList.add("correto");
-    updateAnswerIndicator("correto");
+    atualizar_indicador_resposta("correto");
     respostas_corretas++;
   } else {
     element.classList.add("incorreto");
-    updateAnswerIndicator("incorreto");
+    atualizar_indicador_resposta("incorreto");
 
     var opcao_len = container_opcoes.children.length;
     for (let i = 0; i < opcao_len; i++) {
@@ -99,7 +99,7 @@ function indicador_respostas() {
   }
 }
 
-function updateAnswerIndicator(markType) {
+function atualizar_indicador_resposta(markType) {
   container_indicador_respostas.children[contador_questoes - 1].classList.add(
     markType
   );

@@ -2,13 +2,13 @@
 var quiz = [
   {
     q: "Qual é o nome do esporte equestre em que os competidores pulam obstáculos em uma pista?",
-    options: ["Hipismo", "Adestramento", "Polo", "Corrida de cavalos"],
+    opcoes: ["Hipismo", "Adestramento", "Polo", "Corrida de cavalos"],
     answer: 0,
   },
 
   {
     q: "Qual destas opções é uma prova de resistência para cavalos?",
-    options: [
+    opcoes: [
       "Salto em altura",
       " Corrida de cavalos",
       "Enduro equestre",
@@ -19,13 +19,13 @@ var quiz = [
 
   {
     q: "Qual é o nome da disciplina em que os cavalos executam movimentos precisos em resposta a comandos do cavaleiro?",
-    options: ["Hipismo", "Polo", "Corrida de cavalos", "Adestramento"],
+    opcoes: ["Hipismo", "Polo", "Corrida de cavalos", "Adestramento"],
     answer: 3,
   },
 
   {
     q: 'Qual é o objetivo do esporte equestre chamado "CCE" (Concurso Completo de Equitação)?',
-    options: [
+    opcoes: [
       "Salto de obstáculos",
       "Corrida de cavalos",
       "Polo",
@@ -36,43 +36,43 @@ var quiz = [
 
   {
     q: "Em que país o polo é um esporte muito popular?",
-    options: ["Estados Unidos", "Reino Unido", "Brasil", "Rússia"],
+    opcoes: ["Estados Unidos", "Reino Unido", "Brasil", "Rússia"],
     answer: 1,
   },
 
   {
     q: 'O termo "cernelha" refere-se à parte inferior da pata de um cavalo.',
-    options: ["Verdadeiro", "Falso"],
+    opcoes: ["Verdadeiro", "Falso"],
     answer: 1,
   },
 
   {
     q: "No polo, os jogadores montam pôneis em vez de cavalos.",
-    options: ["Verdadeiro", "Falso"],
+    opcoes: ["Verdadeiro", "Falso"],
     answer: 1,
   },
 
   {
     q: "Qual é o nome do esporte equestre em que os cavaleiros competem em um circuito de obstáculos de salto em uma pista fechada?",
-    options: ["Polo", "Corrida de cavalos", "Hipismo", "Adestramento"],
+    opcoes: ["Polo", "Corrida de cavalos", "Hipismo", "Adestramento"],
     answer: 2,
   },
 
   {
     q: "Qual é o termo usado para descrever a cor de um cavalo que é completamente branca?",
-    options: ["Alazão", "Baio", "Pampa", "Albinismo"],
+    opcoes: ["Alazão", "Baio", "Pampa", "Albinismo"],
     answer: 3,
   },
 
   {
     q: "Qual destas disciplinas equestres envolve o treinamento e o controle da movimentação de um cavalo sem a necessidade de sela?",
-    options: ["Hipismo", "Adestramento", "Polo", "Equitação à rédea"],
+    opcoes: ["Hipismo", "Adestramento", "Polo", "Equitação à rédea"],
     answer: 3,
   },
 
   {
     q: "Qual é o nome da competição de corrida de cavalos mais famosa do mundo?",
-    options: [
+    opcoes: [
       "Kentucky Derby",
       "Grande Prêmio de Belmont",
       "Corrida de Preakness",
@@ -83,7 +83,7 @@ var quiz = [
 
   {
     q: "Qual é a função principal do chicote no hipismo?",
-    options: [
+    opcoes: [
       "Acelerar o cavalo",
       "Dirigir o cavalo",
       "Sinalizar desobediência",
@@ -94,19 +94,19 @@ var quiz = [
 
   {
     q: "Qual é a altura média de um cavalo de raça Pônei Shetland?",
-    options: ["12 mãos", "15 mãos", "18 mãos", "10 mãos"],
+    opcoes: ["12 mãos", "15 mãos", "18 mãos", "10 mãos"],
     answer: 0,
   },
 
   {
     q: "Qual é a parte da rédea em que o cavaleiro segura enquanto monta?",
-    options: ["Bridão", "Cabresto", "Tala", "Barrigueira"],
+    opcoes: ["Bridão", "Cabresto", "Tala", "Barrigueira"],
     answer: 0,
   },
 
   {
     q: "Qual é o nome da primeira corrida da Tríplice Coroa de corrida de cavalos nos Estados Unidos?",
-    options: [
+    opcoes: [
       "Kentucky Derby",
       "Belmont Stakes",
       "Preakness Stakes",
@@ -117,43 +117,43 @@ var quiz = [
 
   {
     q: "Qual é o nome do esporte equestre que envolve o uso de bois como gado para pastoreio?",
-    options: ["Hipismo", "Rédeas", "Rodeio", "Team Penning"],
+    opcoes: ["Hipismo", "Rédeas", "Rodeio", "Team Penning"],
     answer: 3,
   },
 
   {
     q: "Que equipamento é usado para proteger a cabeça do cavalo durante o salto em hipismo?",
-    options: ["Peitoral", "Capa", "Boquilha", "Protetor de cabeça"],
+    opcoes: ["Peitoral", "Capa", "Boquilha", "Protetor de cabeça"],
     answer: 3,
   },
 
   {
     q: "Qual é o termo usado para a área de uma pista de corrida onde as corridas começam e terminam?",
-    options: ["Linha de chegada", "Curva", "Reto final", "Reto oposto"],
+    opcoes: ["Linha de chegada", "Curva", "Reto final", "Reto oposto"],
     answer: 0,
   },
 
   {
     q: "Qual é o nome do esporte equestre que envolve o uso de uma bola e um taco montado a cavalo?",
-    options: ["Polo", "Hipismo", "Corrida de cavalos", "Adestramento"],
+    opcoes: ["Polo", "Hipismo", "Corrida de cavalos", "Adestramento"],
     answer: 0,
   },
 
   {
     q: "Qual é a cor mais comum de um cavalo no mundo?",
-    options: ["Preto", "Castanho", "Alazão", "Tordilho"],
+    opcoes: ["Preto", "Castanho", "Alazão", "Tordilho"],
     answer: 1,
   },
 
   {
     q: "Qual é o termo para o ato de escovar o pelo de um cavalo para limpeza e cuidado?",
-    options: ["Pentear", "Pastoreio", "Adestramento", "Escovação"],
+    opcoes: ["Pentear", "Pastoreio", "Adestramento", "Escovação"],
     answer: 3,
   },
 
   {
     q: 'O que é uma "sela" em termos de equipamento equestre?',
-    options: [
+    opcoes: [
       "Parte da cabeça do cavalo",
       "Um tipo de couro",
       "Uma espécie de arreio",
@@ -164,13 +164,13 @@ var quiz = [
 
   {
     q: "Qual é a parte da sela onde o cavaleiro senta?",
-    options: ["Barrigueira", "Estribo", "Travessão", "Assento"],
+    opcoes: ["Barrigueira", "Estribo", "Travessão", "Assento"],
     answer: 3,
   },
 
   {
     q: 'O que é um "freio" em termos de equipamento equestre?',
-    options: [
+    opcoes: [
       "Um tipo de alimento para cavalos",
       "Um método de controle do cavalo",
       "Uma peça de roupa para o cavalo",
@@ -181,7 +181,7 @@ var quiz = [
 
   {
     q: 'O que é o "derby" em corridas de cavalos?',
-    options: [
+    opcoes: [
       "Uma raça de cavalo",
       "Um tipo de sela",
       "Uma competição de saltos",
@@ -192,13 +192,13 @@ var quiz = [
 
   {
     q: 'Qual é a parte do cavalo que é mais frequentemente medida em "mãos"?',
-    options: ["Cauda", "Cabeça", "Altura", "Comprimento"],
+    opcoes: ["Cauda", "Cabeça", "Altura", "Comprimento"],
     answer: 2,
   },
 
   {
     q: 'Onde é realizada a competição de "Rédeas"?',
-    options: [
+    opcoes: [
       "Circuito fechado",
       "Circuito aberto",
       "Pista de salto",
@@ -209,13 +209,13 @@ var quiz = [
 
   {
     q: "Qual é a competição equestre que envolve movimentos coreografados de dança a cavalo?",
-    options: ["Balé a cavalo", "Adestramento", "Dança de salão", "Hipismo"],
+    opcoes: ["Balé a cavalo", "Adestramento", "Dança de salão", "Hipismo"],
     answer: 1,
   },
 
   {
     q: 'O que é uma "pista de treinamento" em termos de equitação?',
-    options: [
+    opcoes: [
       "Uma pista para corrida de cavalos",
       "Uma área cercada para treinamento de cavalos",
       "Um tipo de equipamento para cavalos",
@@ -226,13 +226,13 @@ var quiz = [
 
   {
     q: "Qual é o termo para um cavalo que tem manchas brancas em sua pelagem?",
-    options: ["Baio", "Alazão", "Pampa", "Malhado"],
+    opcoes: ["Baio", "Alazão", "Pampa", "Malhado"],
     answer: 2,
   },
 
   {
     q: 'O que é um "arreio" em termos de equipamento equestre?',
-    options: [
+    opcoes: [
       "Uma coleira para cavalos",
       "Um tipo de selim",
       "Uma ferramenta para limpeza de cascos",
@@ -243,13 +243,13 @@ var quiz = [
 
   {
     q: "Em que esporte equestre os cavaleiros competem em uma arena para guiar um boi?",
-    options: ["Rodeio", "Polo", "Rédeas", "Enduro"],
+    opcoes: ["Rodeio", "Polo", "Rédeas", "Enduro"],
     answer: 2,
   },
 
   {
     q: "Qual é a função principal do capacete em equitação?",
-    options: [
+    opcoes: [
       "Proteger os joelhos",
       "Proteger os cotovelos",
       "Proteger a cabeça",
@@ -260,13 +260,13 @@ var quiz = [
 
   {
     q: "Qual é o termo para uma raça de cavalo de trabalho conhecida por sua força e tração?",
-    options: ["Pônei", "Arábico", "Percheron", "Quarto de milha"],
+    opcoes: ["Pônei", "Arábico", "Percheron", "Quarto de milha"],
     answer: 2,
   },
 
   {
     q: 'O que é um "trote" em equitação?',
-    options: [
+    opcoes: [
       "Um tipo de comida para cavalos",
       "Um movimento rápido",
       "Um passo lento e controlado",
@@ -277,13 +277,13 @@ var quiz = [
 
   {
     q: "Qual é o termo para um cavalo com uma pelagem marrom avermelhada?",
-    options: ["Tordilho", "Alazão", "Preto", "Pampa"],
+    opcoes: ["Tordilho", "Alazão", "Preto", "Pampa"],
     answer: 1,
   },
 
   {
     q: 'O que é uma "estrebaria" em termos de equitação?',
-    options: [
+    opcoes: [
       "Um lugar para limpar o cavalo",
       "Um tipo de sela",
       "Um abrigo para cavalos",
@@ -294,49 +294,49 @@ var quiz = [
 
   {
     q: "Qual é o termo para a prática de montar um cavalo em ritmo acelerado?",
-    options: ["Trote", "Galope", "Andadura", "Marcha"],
+    opcoes: ["Trote", "Galope", "Andadura", "Marcha"],
     answer: 1,
   },
 
   {
     q: "Em que esporte equestre os cavaleiros correm em uma pista oval?",
-    options: ["Polo", "Rédeas", "Enduro", "Corrida de cavalos"],
+    opcoes: ["Polo", "Rédeas", "Enduro", "Corrida de cavalos"],
     answer: 3,
   },
 
   {
     q: "Em que disciplina equestre os cavalos executam uma série de movimentos de alta escola, incluindo saltos no lugar e meia-volta?",
-    options: ["Doma clássica", "CCE", "Rédeas", "Corrida de cavalos"],
+    opcoes: ["Doma clássica", "CCE", "Rédeas", "Corrida de cavalos"],
     answer: 0,
   },
 
   {
     q: "Qual é o termo para a área em uma pista de corrida onde os cavalos correm em círculos antes de começar a corrida?",
-    options: ["Box de largada", "Linha de chegada", "Curva", "Reta final"],
+    opcoes: ["Box de largada", "Linha de chegada", "Curva", "Reta final"],
     answer: 2,
   },
 
   {
     q: "Qual é o nome da peça que cobre as costas do cavalo e fornece suporte para o cavaleiro?",
-    options: ["Estribo", "Sela", "Barrigueira", "Cabresto"],
+    opcoes: ["Estribo", "Sela", "Barrigueira", "Cabresto"],
     answer: 1,
   },
 
   {
     q: "Qual é o termo para o ato de controlar o cavalo com rédeas?",
-    options: ["Doma clássica", "Enduro", "Rédeas", "Hipismo"],
+    opcoes: ["Doma clássica", "Enduro", "Rédeas", "Hipismo"],
     answer: 2,
   },
 
   {
     q: 'Que parte do cavalo é frequentemente coberta por uma "cabeçada"?',
-    options: ["Cabeça", "Casco", "Pescoço", "Boca"],
+    opcoes: ["Cabeça", "Casco", "Pescoço", "Boca"],
     answer: 0,
   },
 
   {
     q: 'O que é um "paddock" em termos de equitação?',
-    options: [
+    opcoes: [
       "Uma competição de salto",
       "Um pequeno cercado para cavalos",
       "Um tipo de cela",
@@ -347,13 +347,13 @@ var quiz = [
 
   {
     q: "Qual é o termo para a ferramenta usada para limpar os cascos de um cavalo?",
-    options: ["Escova", "Espora", "Ferradura", "Picadeira"],
+    opcoes: ["Escova", "Espora", "Ferradura", "Picadeira"],
     answer: 2,
   },
 
   {
     q: 'O que é um "trote" em equitação?',
-    options: [
+    opcoes: [
       "Um movimento lento do cavalo",
       "Um som feito pelo cavaleiro",
       "Um tipo de rédea",
@@ -364,7 +364,7 @@ var quiz = [
 
   {
     q: 'O que é uma "cauda de cavalo"?',
-    options: [
+    opcoes: [
       "Uma raça de cavalo",
       "Um tipo de penteado",
       "Uma competição de salto",
@@ -375,13 +375,13 @@ var quiz = [
 
   {
     q: "Qual é o termo para a estrutura que segura a sela nas costas do cavalo?",
-    options: ["Barrigueira", "Estribo", "Cabeçada", "Rédea"],
+    opcoes: ["Barrigueira", "Estribo", "Cabeçada", "Rédea"],
     answer: 0,
   },
 
   {
     q: 'O que é o "sprint final" em corridas de cavalos?',
-    options: [
+    opcoes: [
       "A parte mais lenta da corrida",
       "Uma corrida de longa distância",
       "O treinamento inicial",
@@ -392,13 +392,13 @@ var quiz = [
 
   {
     q: "Qual é o termo para um cavalo com uma pelagem branca e preta?",
-    options: ["Alazão", "Malhado", "Pampa", "Baio"],
+    opcoes: ["Alazão", "Malhado", "Pampa", "Baio"],
     answer: 1,
   },
 
   {
     q: 'O que é um "jóquei"?',
-    options: [
+    opcoes: [
       "Um tipo de corrida",
       "Um tipo de cavalo",
       "Um piloto de corrida de cavalos",
@@ -409,13 +409,13 @@ var quiz = [
 
   {
     q: "Qual é o termo para o espaço onde os cavalos vivem e são cuidados?",
-    options: ["Circuito", "Hipódromo", "Haras", "Sela"],
+    opcoes: ["Circuito", "Hipódromo", "Haras", "Sela"],
     answer: 2,
   },
 
   {
     q: 'O que é o "passo" em equitação?',
-    options: [
+    opcoes: [
       "Um movimento rápido do cavalo",
       "Um tipo de alimentação",
       "Um movimento lento do cavalo",
@@ -426,7 +426,7 @@ var quiz = [
 
   {
     q: 'O que é um "trote" em equitação?',
-    options: [
+    opcoes: [
       "Um movimento rápido do cavalo",
       "Um som feito pelo cavaleiro",
       "Um movimento lento do cavalo",
@@ -437,7 +437,7 @@ var quiz = [
 
   {
     q: 'O que é uma "prova de obstáculos"?',
-    options: [
+    opcoes: [
       "Um teste de resistência",
       "Uma competição de salto",
       "Um tipo de corrida",
@@ -448,13 +448,13 @@ var quiz = [
 
   {
     q: "Qual é o termo para a área onde os cavalos se exercitam e são treinados?",
-    options: ["Barrigueira", "Circuito", "Picadeira", "Haras"],
+    opcoes: ["Barrigueira", "Circuito", "Picadeira", "Haras"],
     answer: 2,
   },
 
   {
     q: 'O que é o "galope"?',
-    options: [
+    opcoes: [
       "Um movimento lento do cavalo",
       "Um tipo de corrida",
       "Um cavalo de grande porte",
