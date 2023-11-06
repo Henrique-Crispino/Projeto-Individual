@@ -28,8 +28,9 @@ var quiz = [
         q: 'Em que país o polo é um esporte muito popular?',
         options: ['Estados Unidos', 'Reino Unido', 'Brasil', 'Rússia'],
         answer: 1
-    },
+    },]
 
+    /*
     {
         q: 'O termo "cernelha" refere-se à parte inferior da pata de um cavalo.',
         options: ['Verdadeiro', 'Falso'],
@@ -119,4 +120,4 @@ var quiz = [
         options: ['Preto', 'Castanho', 'Alazão', 'Tordilho'],
         answer: 1
     },
-];
+];*/
