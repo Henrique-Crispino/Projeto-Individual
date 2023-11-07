@@ -1,283 +1,264 @@
 //Vetor de objetos
 var quiz = [
-  {
-    q: "Qual é o nome do esporte equestre em que os competidores pulam obstáculos em uma pista?",
-    opcoes: ["Hipismo", "Adestramento", "Polo", "Corrida de cavalos"],
-    resposta: 0,
-  },
 
+  //Perguntas fáceis
   {
-    q: "Qual destas opções é uma prova de resistência para cavalos?",
-    opcoes: [
-      "Salto em altura",
-      " Corrida de cavalos",
-      "Enduro equestre",
-      "Adestramento",
-    ],
+    q: "Qual é a disciplina de equitação que envolve saltos sobre obstáculos? - Fácil",
+    opcoes: ["Adestramento", "Polo", "Salto", "Rédeas"],
     resposta: 2,
   },
 
   {
-    q: "Qual é o nome da disciplina em que os cavalos executam movimentos precisos em resposta a comandos do cavaleiro?",
-    opcoes: ["Hipismo", "Polo", "Corrida de cavalos", "Adestramento"],
+    q: "Qual é o nome da competição de equitação que envolve três disciplinas: adestramento, cross-country e salto? - Fácil",
+    opcoes: ["Copa do Mundo", "Tríplice Coroa", "Pentatlo Moderno", "Eventing"],
     resposta: 3,
   },
 
   {
-    q: 'Qual é o objetivo do esporte equestre chamado "CCE" (Concurso Completo de Equitação)?',
+    q: "Qual cavalo é conhecido por ser uma raça originária da Espanha e muitas vezes associado à equitação clássica? - Fácil",
+    opcoes: ["Pônei Shetland", "Puro-sangue Árabe", "Andaluz", "Mustang"],
+    resposta: 2,
+  },
+
+  {
+    q: 'Em que esporte equestre os cavaleiros competem em um campo circular com o objetivo de marcar gols contra a equipe adversária? - Fácil',
     opcoes: [
-      "Salto de obstáculos",
-      "Corrida de cavalos",
+      "Hipismo Paralímpico",
+      "Corrida de Barris",
+      "Equitação a Rédeas",
       "Polo",
-      "Combinação de adestramento, cross-country e salto",
     ],
     resposta: 3,
   },
 
   {
-    q: "Em que país o polo é um esporte muito popular?",
+    q: "Em que país o polo é um esporte muito popular? - Fácil",
     opcoes: ["Estados Unidos", "Reino Unido", "Brasil", "Rússia"],
     resposta: 1,
   },
 
   {
-    q: 'O termo "cernelha" refere-se à parte inferior da pata de um cavalo.',
+    q: 'O que é um obstáculo de salto usado em competições de salto a cavalo, composto por uma série de barras que podem ser ajustadas em altura? - Fácil',
+    opcoes: ["Trave de Equilíbrio", "Portão", "Cavalo de Balanço", "Obstáculo de Salto"],
+    resposta: 3,
+  },
+
+  {
+    q: "Qual é o esporte equestre que envolve a habilidade de treinar um cavalo para executar movimentos complexos e elegantes? - Fácil",
+    opcoes: ["Salto", "Adestramento", "Corrida de Barris", "Enduro"],
+    resposta: 1,
+  },
+
+  {
+    q: "Qual é o nome do evento de equitação onde os competidores correm uma trilha longa e desafiadora através do campo? - Fácil",
+    opcoes: ["Derby de Polo", "Corrida de Barris", "Enduro", "Pentatlo Moderno"],
+    resposta: 2,
+  },
+
+  {
+    q: "Qual cavalo é conhecido por sua velocidade e é frequentemente usado em corridas de puro-sangue? - Fácil",
+    opcoes: ["Clydesdale", "Puro-sangue Inglês", "Shire", "Appaloosa"],
+    resposta: 1,
+  },
+
+  {
+    q: "Qual é a disciplina de equitação em que os cavaleiros competem em jogos a cavalo, como corrida de sacos e corrida de anel? - Fácil",
+    opcoes: ["Polo", "Cowboy Mounted Shooting", "Esportes a Cavalo", "Ginástica Equestre"],
+    resposta: 2,
+  },
+
+  {
+    q: "Em que país o esporte equestre chamado 'charrería' é tradicionalmente praticado? - Fácil",
+    opcoes: [
+      "Espanha",
+      "Estados Unidos",
+      "México",
+      "França",
+    ],
+    resposta: 2,
+  },
+
+  {
+    q: "Qual destes não é um equipamento de montaria equestre? - Fácil",
+    opcoes: [
+      "Espora",
+      "Ferradura",
+      "Espaçador",
+      "Bridão",
+    ],
+    resposta: 2,
+  },
+
+  {
+    q: "O que é o 'trote' em equitação? - Fácil",
+    opcoes: ["Uma corrida de longa distância", "Um tipo de salto alto", "Um passo intermediário entre o passo e o galope", "Um tipo de salto sem obstáculos"],
+    resposta: 2,
+  },
+
+  {
+    q: "Qual é o termo usado para descrever um cavalo que tem um casco branco com manchas escuras? - Fácil",
+    opcoes: ["Overo", "Tobiano", "Palomino", "Pampa"],
+    resposta: 0,
+  },
+
+  {
+    q: "O termo 'Hípica' é geralmente associado a quais tipos de esportes equestres? - Fácil",
+    opcoes: [
+      "Polo e Corrida de Barris",
+      "Adestramento e Salto",
+      "Enduro e Rédeas",
+      "Hipismo Paralímpico e Pentatlo Moderno",
+    ],
+    resposta: 1,
+  },
+
+  {
+    q: "Qual é o esporte equestre em que os cavaleiros competem em uma série de eventos de velocidade e habilidade? - Fácil",
+    opcoes: ["Enduro", "Rédeas", "Cowboy Mounted Shooting", "Ginástica Equestre"],
+    resposta: 2,
+  },
+
+  {
+    q: "Quem é o cavaleiro de salto a cavalo mais decorado da história, com inúmeras medalhas olímpicas? - Fácil",
+    opcoes: ["Beezie Madden", "Rodrigo Pessoa", "Michael Jung", "Ludger Beerbaum"],
+    resposta: 1,
+  },
+
+  {
+    q: "Qual é o termo usado para descrever o ato de escovar o pelo de um cavalo para mantê-lo limpo e saudável? - Fácil",
+    opcoes: ["Escovação", "Escovação a Seco", "Escovação a Molhado", "Escovação a Vácuo"],
+    resposta: 1,
+  },
+
+  {
+    q: "Qual é o nome da competição de hipismo que reúne os melhores saltadores do mundo em uma série de etapas? - Fácil",
+    opcoes: ["Grande Prêmio de Saltos", "Campeonato Mundial de Salto", "Copa das Nações", "Copa do Mundo de Salto"],
+    resposta: 3,
+  },
+
+  {
+    q: "Qual é o esporte equestre em que os cavaleiros demonstram sua habilidade em laçar um boi em movimento? - Fácil",
+    opcoes: ["Adestramento", "Laço de Bezerro", "Rédeas", "Corrida de Barris"],
+    resposta: 1,
+  },
+
+  {
+    q: "O termo dressage é frequentemente associado a qual esporte equestre? - Fácil",
+    opcoes: ["Polo", "Salto", "Adestramento", "Rédeas"],
+    resposta: 2,
+  },
+
+  {
+    q: 'Qual é a disciplina de equitação em que os cavaleiros tem que dar a volta em três tambores colocados em formato de trevo na arena? - Fácil',
+    opcoes: [
+      "Salto",
+      "Corrida de Barris",
+      "Rédeas",
+      "Polo",
+    ],
+    resposta: 1,
+  },
+
+  {
+    q: "O que é um galope na equitação? - Fácil",
+    opcoes: ["Um passo lento", "Um passo médio", "Um passo rápido", "Um tipo de salto"],
+    resposta: 2,
+  },
+
+  {
+    q: 'Qual é o esporte equestre em que os cavaleiros competem em uma série de eventos de perícia, como cortar o gado? - Fácil',
+    opcoes: [
+      "Laço de Bezerro",
+      "Ginástica Equestre",
+      "Cowboy Mounted Shooting",
+      "Enduro",
+    ],
+    resposta: 0,
+  },
+
+  {
+    q: 'Qual é a parte do equipamento de montaria que é colocada na cabeça do cavalo e é usada para controlá-lo? - Fácil',
+    opcoes: [
+      "Sela",
+      "Bridão",
+      "Espora",
+      "Rédea",
+    ],
+    resposta: 1,
+  },
+
+  {
+    q: 'Qual é o termo usado para descrever um cavalo de pêlo amarelo-dourado com crina e cauda brancas? - Fácil',
+    opcoes: ["Appaloosa", "Tobiano", "Palomino", "Pampa"],
+    resposta: 2,
+  },
+
+  {
+    q: 'O salto é uma disciplina de equitação que envolve corridas em alta velocidade. - Fácil',
+    opcoes: [
+      "Verdadeiro",
+      "Falso",
+    ],
+    resposta: 1,
+  },
+
+  {
+    q: "O puro-sangue árabe é uma raça de cavalo conhecida por sua resistência em corridas de longa distância. - Fácil",
     opcoes: ["Verdadeiro", "Falso"],
-    resposta: 1,
+    resposta: 0,
   },
 
   {
-    q: "No polo, os jogadores montam pôneis em vez de cavalos.",
+    q: 'O hipismo paralímpico é uma categoria de esportes equestres adaptada para atletas com deficiências físicas. - Fácil',
+    opcoes: [
+      "Verdadeiro", "Falso"
+    ],
+    resposta: 0,
+  },
+
+  {
+    q: "Um casco de cavalo deve ser cortado regularmente para evitar doenças nos cascos. - Fácil",
     opcoes: ["Verdadeiro", "Falso"],
-    resposta: 1,
+    resposta: 0,
   },
 
   {
-    q: "Qual é o nome do esporte equestre em que os cavaleiros competem em um circuito de obstáculos de salto em uma pista fechada?",
-    opcoes: ["Polo", "Corrida de cavalos", "Hipismo", "Adestramento"],
-    resposta: 2,
-  },
-
-  {
-    q: "Qual é o termo usado para descrever a cor de um cavalo que é completamente branca?",
-    opcoes: ["Alazão", "Baio", "Pampa", "Albinismo"],
-    resposta: 3,
-  },
-
-  {
-    q: "Qual destas disciplinas equestres envolve o treinamento e o controle da movimentação de um cavalo sem a necessidade de sela?",
-    opcoes: ["Hipismo", "Adestramento", "Polo", "Equitação à rédea"],
-    resposta: 3,
-  },
-
-  {
-    q: "Qual é o nome da competição de corrida de cavalos mais famosa do mundo?",
+    q: 'A equitação a rédeas é uma disciplina de hipismo que se originou na França. - Fácil',
     opcoes: [
-      "Kentucky Derby",
-      "Grande Prêmio de Belmont",
-      "Corrida de Preakness",
-      "Derby de Epsom",
-    ],
-    resposta: 0,
-  },
-
-  {
-    q: "Qual é a função principal do chicote no hipismo?",
-    opcoes: [
-      "Acelerar o cavalo",
-      "Dirigir o cavalo",
-      "Sinalizar desobediência",
-      "Limpar a pista",
-    ],
-    resposta: 2,
-  },
-
-  {
-    q: "Qual é a altura média de um cavalo de raça Pônei Shetland?",
-    opcoes: ["12 mãos", "15 mãos", "18 mãos", "10 mãos"],
-    resposta: 0,
-  },
-
-  {
-    q: "Qual é a parte da rédea em que o cavaleiro segura enquanto monta?",
-    opcoes: ["Bridão", "Cabresto", "Tala", "Barrigueira"],
-    resposta: 0,
-  },
-
-  {
-    q: "Qual é o nome da primeira corrida da Tríplice Coroa de corrida de cavalos nos Estados Unidos?",
-    opcoes: [
-      "Kentucky Derby",
-      "Belmont Stakes",
-      "Preakness Stakes",
-      "Derby de Santa Anita",
-    ],
-    resposta: 0,
-  },
-
-  {
-    q: "Qual é o nome do esporte equestre que envolve o uso de bois como gado para pastoreio?",
-    opcoes: ["Hipismo", "Rédeas", "Rodeio", "Team Penning"],
-    resposta: 3,
-  },
-
-  {
-    q: "Que equipamento é usado para proteger a cabeça do cavalo durante o salto em hipismo?",
-    opcoes: ["Peitoral", "Capa", "Boquilha", "Protetor de cabeça"],
-    resposta: 3,
-  },
-
-  {
-    q: "Qual é o termo usado para a área de uma pista de corrida onde as corridas começam e terminam?",
-    opcoes: ["Linha de chegada", "Curva", "Reto final", "Reto oposto"],
-    resposta: 0,
-  },
-
-  {
-    q: "Qual é o nome do esporte equestre que envolve o uso de uma bola e um taco montado a cavalo?",
-    opcoes: ["Polo", "Hipismo", "Corrida de cavalos", "Adestramento"],
-    resposta: 0,
-  },
-
-  {
-    q: "Qual é a cor mais comum de um cavalo no mundo?",
-    opcoes: ["Preto", "Castanho", "Alazão", "Tordilho"],
-    resposta: 1,
-  },
-
-  {
-    q: "Qual é o termo para o ato de escovar o pelo de um cavalo para limpeza e cuidado?",
-    opcoes: ["Pentear", "Pastoreio", "Adestramento", "Escovação"],
-    resposta: 3,
-  },
-
-  {
-    q: 'O que é uma "sela" em termos de equipamento equestre?',
-    opcoes: [
-      "Parte da cabeça do cavalo",
-      "Um tipo de couro",
-      "Uma espécie de arreio",
-      "Uma raça de cavalo",
-    ],
-    resposta: 2,
-  },
-
-  {
-    q: "Qual é a parte da sela onde o cavaleiro senta?",
-    opcoes: ["Barrigueira", "Estribo", "Travessão", "Assento"],
-    resposta: 3,
-  },
-
-  {
-    q: 'O que é um "freio" em termos de equipamento equestre?',
-    opcoes: [
-      "Um tipo de alimento para cavalos",
-      "Um método de controle do cavalo",
-      "Uma peça de roupa para o cavalo",
-      "Uma corrida de cavalos",
+      "Verdadeiro", "Falso",
     ],
     resposta: 1,
   },
 
   {
-    q: 'O que é o "derby" em corridas de cavalos?',
-    opcoes: [
-      "Uma raça de cavalo",
-      "Um tipo de sela",
-      "Uma competição de saltos",
-      "Uma corrida de longa distância",
-    ],
-    resposta: 3,
-  },
-
-  {
-    q: 'Qual é a parte do cavalo que é mais frequentemente medida em "mãos"?',
-    opcoes: ["Cauda", "Cabeça", "Altura", "Comprimento"],
-    resposta: 2,
-  },
-
-  {
-    q: 'Onde é realizada a competição de "Rédeas"?',
-    opcoes: [
-      "Circuito fechado",
-      "Circuito aberto",
-      "Pista de salto",
-      "Pista de corrida",
-    ],
+    q: "O cowboy mounted shooting é uma disciplina de equitação em que os cavaleiros atiram em alvos enquanto montam a cavalo. - Fácil",
+    opcoes: ["Verdadeiro", "Fácil"],
     resposta: 0,
   },
 
   {
-    q: "Qual é a competição equestre que envolve movimentos coreografados de dança a cavalo?",
-    opcoes: ["Balé a cavalo", "Adestramento", "Dança de salão", "Hipismo"],
-    resposta: 1,
-  },
-
-  {
-    q: 'O que é uma "pista de treinamento" em termos de equitação?',
+    q: "A maioria das competições de salto a cavalo acontece em pistas retas. - Fácil",
     opcoes: [
-      "Uma pista para corrida de cavalos",
-      "Uma área cercada para treinamento de cavalos",
-      "Um tipo de equipamento para cavalos",
-      "Um local de descanso para cavalos",
+      "Verdadeiro", "Falso"
     ],
     resposta: 1,
   },
 
   {
-    q: "Qual é o termo para um cavalo que tem manchas brancas em sua pelagem?",
-    opcoes: ["Baio", "Alazão", "Pampa", "Malhado"],
-    resposta: 2,
+    q: "O termo mangalarga se refere a uma raça de cavalo originária do Brasil. - Fácil",
+    opcoes: ["Verdadeiro", "Falso"],
+    resposta: 0,
   },
 
   {
-    q: 'O que é um "arreio" em termos de equipamento equestre?',
-    opcoes: [
-      "Uma coleira para cavalos",
-      "Um tipo de selim",
-      "Uma ferramenta para limpeza de cascos",
-      "Um tipo de comida para cavalos",
-    ],
-    resposta: 1,
+    q: 'Os eventos de enduro equestre podem cobrir grandes distâncias em terrenos variados. - Fácil',
+    opcoes: ["Verdadeiro", "Falso"],
+    resposta: 0,
   },
 
   {
-    q: "Em que esporte equestre os cavaleiros competem em uma arena para guiar um boi?",
-    opcoes: ["Rodeio", "Polo", "Rédeas", "Enduro"],
-    resposta: 2,
-  },
-
-  {
-    q: "Qual é a função principal do capacete em equitação?",
-    opcoes: [
-      "Proteger os joelhos",
-      "Proteger os cotovelos",
-      "Proteger a cabeça",
-      "Proteger os pés",
-    ],
-    resposta: 2,
-  },
-
-  {
-    q: "Qual é o termo para uma raça de cavalo de trabalho conhecida por sua força e tração?",
-    opcoes: ["Pônei", "Arábico", "Percheron", "Quarto de milha"],
-    resposta: 2,
-  },
-
-  {
-    q: 'O que é um "trote" em equitação?',
-    opcoes: [
-      "Um tipo de comida para cavalos",
-      "Um movimento rápido",
-      "Um passo lento e controlado",
-      "Um tipo de salto",
-    ],
-    resposta: 2,
-  },
-
-  {
-    q: "Qual é o termo para um cavalo com uma pelagem marrom avermelhada?",
-    opcoes: ["Tordilho", "Alazão", "Preto", "Pampa"],
+    q: "O termo cavalo de sela se refere a um cavalo utilizado principalmente para tração pesada. - Fácil",
+    opcoes: ["Verdadeiro", "Falso"],
     resposta: 1,
   },
 
