@@ -5,6 +5,7 @@ var container_indicador_respostas = document.querySelector(".indicador_respostas
 var container_casa = document.querySelector(".container_casa");
 var container_quiz = document.querySelector(".container_quiz");
 var container_resultado = document.querySelector(".container_resultado");
+var container_dash = document.querySelector(".container_dash");
 
 var limite_de_questoes = 10;
 var contador_questoes = 0;
@@ -145,6 +146,7 @@ function tentar_novamente() {
 
 function volte_inicio() {
     container_resultado.classList.add("hide");
+    container_dash.classList.add("hide")
     container_casa.classList.remove("hide");
     resetar_quiz()
 }
@@ -156,6 +158,11 @@ function iniciar_quiz() {
   nova_questao();
   indicador_respostas();
 };
+
+function ver_dash() {
+  container_resultado.classList.add("hide");
+  container_dash.classList.remove("hide");
+}
 
 window.onload = function () {
     container_casa.querySelector(".total_questoes").innerHTML = limite_de_questoes;

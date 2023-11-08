@@ -13,14 +13,13 @@
 
 <body>
 
-    <div class="container_casa container_personalizado">
+    <div class="container_casa container_personalizado hide">
 
     <h3>Instrução:</h3>
     <p>Número total de questões: <span class="total_questoes"></span> sendo elas divididas em três dificuldades: <p>fácil, médio e díficil.</p></p>
     <p>O quiz não possui limite de tempo, tenha calma para responder.</p>
     <p>Não é possível voltar atrás para responder questões já passadas.</p>
     <button type="button" class="btn" onclick="iniciar_quiz()">Iniciar Quiz</button>
-
     </div>
 
     <div class="container_quiz container_personalizado hide">
@@ -85,8 +84,54 @@
         </table>
 
         <button type="button" class="btn" onclick="tentar_novamente()">Tente novamente</button>
+        <button type="button" class="btn" onclick="ver_dash()">Análise de partidas</button>
         <button type="button" class="btn" onclick="volte_inicio()">Início</button>
 
+    </div>
+
+    <div class="container_dash container_personalizado ">
+        <div class="container_t_dash">
+            <div>
+                <h1>Histórico</h1>
+            </div>
+            <div>
+                <p>Total de partidas: <span id="span_total_partidas"></span></p>
+            </div>
+        </div>
+
+        <div class="container_graficos">
+
+            <div class="grafico">
+                <h3>Perguntas fáceis:</h3>
+                <div>
+                    <canvas id="indice_facil"></canvas>
+                </div>
+            </div>
+
+            <div class="grafico">
+                <h3>Perguntas médias:</h3>
+                <div>
+                    <canvas id="indice_medio"></canvas>
+                </div>
+            </div>
+
+            <div class="grafico">
+                <h3>Perguntas difíceis:</h3>
+                <div>
+                    <canvas id="indice_dificil"></canvas>
+                </div>
+            </div>
+
+            <div class="grafico">
+                <h3>Geral:</h3>
+                <div>
+                    <canvas id="indice_geral"></canvas>
+                </div>
+            </div>
+
+        </div> <br>
+
+        <button type="button" class="btn" onclick="volte_inicio()">Início</button>
     </div>
 
 </body>
@@ -95,3 +140,6 @@
 
 <script src="js/question.js"></script>
 <script src="js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+<script src="js/dash.js"></script>

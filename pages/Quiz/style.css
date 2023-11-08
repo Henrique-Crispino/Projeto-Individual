@@ -82,6 +82,11 @@ body {
   display: inline-block;
 }
 
+.btn a {
+  text-decoration: none;
+  color: #ffff;
+}
+
 .btn:hover {
   background-color: #000000bd;
 }
@@ -228,7 +233,7 @@ body {
 .container_resultado h1 {
   font-size: 36px;
   line-height: 42px;
-  color: #009688;
+  color: #000;
 }
 
 .container_resultado table {
@@ -247,6 +252,36 @@ body {
   font-size: 18px;
 }
 
-.container_resultado .btn {
-  margin-right: 20px;
+.container_dash {
+  font-size: 24px;
+  line-height: 42px;
+  color: #000;
+  text-align: center;
+  max-width: 1000px;
+}
+.container_dash p {
+  font-size: 22px;
+  text-align: left;
+}
+
+.container_t_dash {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.container_graficos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.grafico {
+  width: 200px;
+}
+
+.grafico h3 {
+  font-size: 16px;
 }
