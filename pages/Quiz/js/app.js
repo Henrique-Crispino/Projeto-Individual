@@ -15,6 +15,12 @@ var questoes_disponiveis = [];
 var opcoes_disponiveis = [];
 var respostas_corretas = 0;
 var tentativas = 0;
+var acertos_faceis = 0;
+var acertos_medios = 0;
+var acertos_dificeis = 0;
+var erros_faceis = 0;
+var erros_medios = 0;
+var erros_dificeis = 0;
 
 function set_questoes_disponiveis() {
   var total_questoes = quiz.length;
@@ -25,13 +31,17 @@ function set_questoes_disponiveis() {
 }
 
 function nova_questao() {
-  
-  var indice_questoes = questoes_disponiveis[Math.floor(Math.random() * questoes_disponiveis.length)];
+  var indice_questoes =
+    questoes_disponiveis[
+      Math.floor(Math.random() * questoes_disponiveis.length)
+    ];
   questao_atual = indice_questoes;
   texto_questao.innerHTML = questao_atual.q;
   dificuldade = questao_atual.dificuldade;
-  
-  num_questao.innerHTML = `Questão ${contador_questoes + 1} de ${limite_de_questoes}<br>Dificuldade: ${dificuldade}`;
+
+  num_questao.innerHTML = `Questão ${
+    contador_questoes + 1
+  } de ${limite_de_questoes}<br>Dificuldade: ${dificuldade}`;
 
   var index1 = questoes_disponiveis.indexOf(indice_questoes);
   questoes_disponiveis.splice(index1, 1);
@@ -46,7 +56,8 @@ function nova_questao() {
   var animation_delay = 0.2;
 
   for (var i = 0; i < opcao_len; i++) {
-    var optonIndex = opcoes_disponiveis[Math.floor(Math.random() * opcoes_disponiveis.length)];
+    var optonIndex =
+      opcoes_disponiveis[Math.floor(Math.random() * opcoes_disponiveis.length)];
 
     var index2 = opcoes_disponiveis.indexOf(optonIndex);
     opcoes_disponiveis.splice(index2, 1);
@@ -70,18 +81,32 @@ function pegar_resultado(element) {
     element.classList.add("correto");
     atualizar_indicador_resposta("correto");
     respostas_corretas++;
+    if (dificuldade === "Fácil") {
+      acertos_faceis++;
+    } else if (dificuldade === "Média") {
+      acertos_medios++;
+    } else if (dificuldade === "Díficil") {
+      acertos_dificeis++;
+    }
   } else {
     element.classList.add("incorreto");
     atualizar_indicador_resposta("incorreto");
-
-    var opcao_len = container_opcoes.children.length;
-    for (let i = 0; i < opcao_len; i++) {
-      if (Number(container_opcoes.children[i].id) === questao_atual.resposta) {
-        container_opcoes.children[i].classList.add("correto");
-      }
+    if (dificuldade === "Fácil") {
+      erros_faceis++;
+    } else if (dificuldade === "Média") {
+      erros_medios++;
+    } else if (dificuldade === "Díficil") {
+      erros_dificeis++;
     }
   }
-  
+
+  var opcao_len = container_opcoes.children.length;
+  for (let i = 0; i < opcao_len; i++) {
+    if (Number(container_opcoes.children[i].id) === questao_atual.resposta) {
+      container_opcoes.children[i].classList.add("correto");
+    }
+  }
+
   tentativas++;
   opcoes_nao_clicaveis();
 }
@@ -126,19 +151,30 @@ function fim_quiz() {
 
 function resultado_quiz() {
   var porcentagem = (respostas_corretas / limite_de_questoes) * 100;
-  container_resultado.querySelector(".total_questoes").innerHTML = limite_de_questoes;
+  container_resultado.querySelector(".total_questoes").innerHTML =
+    limite_de_questoes;
   container_resultado.querySelector(".total_tentativas").innerHTML = tentativas;
-  container_resultado.querySelector(".total_corretas").innerHTML = respostas_corretas;
-  container_resultado.querySelector(".total_erradas").innerHTML = tentativas - respostas_corretas;
-  container_resultado.querySelector(".porcentagem").innerHTML = porcentagem.toFixed(2) + "%";
-  container_resultado.querySelector(".total_score").innerHTML = respostas_corretas + " / " + limite_de_questoes;
+  container_resultado.querySelector(".total_corretas").innerHTML =
+    respostas_corretas;
+  container_resultado.querySelector(".total_erradas").innerHTML =
+    tentativas - respostas_corretas;
+  container_resultado.querySelector(".porcentagem").innerHTML =
+    porcentagem.toFixed(2) + "%";
+  container_resultado.querySelector(".total_score").innerHTML =
+    respostas_corretas + " / " + limite_de_questoes;
 }
 
 function resetar_quiz() {
-    contador_questoes = 0;
-    respostas_corretas = 0;
-    tentativas = 0;
-    questoes_disponiveis = [];
+  contador_questoes = 0;
+  respostas_corretas = 0;
+  tentativas = 0;
+  acertos_faceis = 0;
+  acertos_medios = 0;
+  acertos_dificeis = 0;
+  erros_faceis = 0;
+  erros_medios = 0;
+  erros_dificeis = 0;
+  questoes_disponiveis = [];
 }
 
 function tentar_novamente() {
@@ -149,10 +185,10 @@ function tentar_novamente() {
 }
 
 function volte_inicio() {
-    container_resultado.classList.add("hide");
-    container_dash.classList.add("hide")
-    container_casa.classList.remove("hide");
-    resetar_quiz()
+  container_resultado.classList.add("hide");
+  container_dash.classList.add("hide");
+  container_casa.classList.remove("hide");
+  resetar_quiz();
 }
 
 function iniciar_quiz() {
@@ -161,7 +197,7 @@ function iniciar_quiz() {
   set_questoes_disponiveis();
   nova_questao();
   indicador_respostas();
-};
+}
 
 function ver_dash() {
   container_resultado.classList.add("hide");
@@ -169,5 +205,6 @@ function ver_dash() {
 }
 
 window.onload = function () {
-    container_casa.querySelector(".total_questoes").innerHTML = limite_de_questoes;
-}
+  container_casa.querySelector(".total_questoes").innerHTML =
+    limite_de_questoes;
+};
