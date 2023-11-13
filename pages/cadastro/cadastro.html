@@ -19,29 +19,29 @@
 
                 <div class="logo">
                     <img src="media/logo.png" alt="">
-                    <h1>CADASTRO    </h1>
+                    <h1>CADASTRO</h1>
                 </div>
 
                 <div class="formulario">
 
                     <div class="inputs_formulario">
                         <h3>Nome de usuário:</h3>
-                        <input type="text" placeholder="Usuário">
+                        <input type="text" placeholder="Usuário" id="input_nome">
                     </div>
 
                     <div class="inputs_formulario">
                         <h3>E-mail:</h3>
-                        <input type="email" placeholder="usuario123@email.com">
+                        <input type="email" placeholder="usuario123@email.com" id="input_email">
                     </div>
 
                     <div class="inputs_formulario">
                         <h3>Senha:</h3>
-                        <input type="password" placeholder="*******">
+                        <input type="password" placeholder="*******" id="input_senha">
                     </div>
 
                     <div class="inputs_formulario">
                         <h3>Raça preferida:</h3>
-                        <select id="">
+                        <select id="select_raca">
                             <option value="0">Frísio</option>
                             <option value="1">Quarto de Milha</option>
                             <option value="2">Puro-Sangue Inglês</option>
@@ -55,7 +55,7 @@
                         </select>
                     </div>
 
-                    <div class="botao_formulario">
+                    <div class="botao_formulario" onclick="validar_cadastro()">
                         <h3>LOGAR</h3>
                     </div>
 
