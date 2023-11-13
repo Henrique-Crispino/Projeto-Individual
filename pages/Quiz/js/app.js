@@ -10,6 +10,7 @@ var container_dash = document.querySelector(".container_dash");
 var limite_de_questoes = 10;
 var contador_questoes = 0;
 var questao_atual;
+var dificuldade;
 var questoes_disponiveis = [];
 var opcoes_disponiveis = [];
 var respostas_corretas = 0;
@@ -24,11 +25,13 @@ function set_questoes_disponiveis() {
 }
 
 function nova_questao() {
-  num_questao.innerHTML = `Questão ${contador_questoes + 1} de ${limite_de_questoes}`;
-
+  
   var indice_questoes = questoes_disponiveis[Math.floor(Math.random() * questoes_disponiveis.length)];
   questao_atual = indice_questoes;
   texto_questao.innerHTML = questao_atual.q;
+  dificuldade = questao_atual.dificuldade;
+  
+  num_questao.innerHTML = `Questão ${contador_questoes + 1} de ${limite_de_questoes}<br>Dificuldade: ${dificuldade}`;
 
   var index1 = questoes_disponiveis.indexOf(indice_questoes);
   questoes_disponiveis.splice(index1, 1);
@@ -78,6 +81,7 @@ function pegar_resultado(element) {
       }
     }
   }
+  
   tentativas++;
   opcoes_nao_clicaveis();
 }
