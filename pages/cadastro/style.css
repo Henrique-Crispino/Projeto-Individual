@@ -27,7 +27,7 @@ main {
 }
 
 .estilo_container {
-  width: 21%;
+  width: 24%;
   background-color: #8c4e2ae7;
   border: 1px solid #fff;
   border-radius: 25px;
@@ -69,6 +69,21 @@ input::placeholder {
   text-align: center;
 }
 
+select {
+  width: 250px;
+  border-radius: 5px;
+  text-align: center;
+  height: 30px;
+  color: #000;
+  caret-color: #000;
+  border: solid 1px #000;
+  margin-top: 5px;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
 .botao_formulario {
   display: flex;
   justify-content: center;
@@ -90,6 +105,7 @@ a {
   text-decoration: none;
   color: #fff;
   font-weight: bolder;
+  padding: 1px;
 }
 
 a:hover {
