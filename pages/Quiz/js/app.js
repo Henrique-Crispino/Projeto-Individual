@@ -8,6 +8,7 @@ var container_casa = document.querySelector(".container_casa");
 var container_quiz = document.querySelector(".container_quiz");
 var container_resultado = document.querySelector(".container_resultado");
 var container_dash = document.querySelector(".container_dash");
+var container_racas = document.querySelector(".container_racas")
 
 var limite_de_questoes = 10;
 var contador_questoes = 0;
@@ -16,6 +17,7 @@ var dificuldade;
 var questoes_disponiveis = [];
 var opcoes_disponiveis = [];
 var respostas_corretas = 0;
+var respostas_incorretas = 0;
 var tentativas = 0;
 var acertos_faceis = 0;
 var acertos_medios = 0;
@@ -93,6 +95,7 @@ function pegar_resultado(element) {
   } else {
     element.classList.add("incorreto");
     atualizar_indicador_resposta("incorreto");
+    respostas_incorretas++;
     if (dificuldade === "Fácil") {
       erros_faceis++;
     } else if (dificuldade === "Média") {
@@ -164,7 +167,7 @@ function resultado_quiz() {
   container_resultado.querySelector(".total_corretas").innerHTML =
     respostas_corretas;
   container_resultado.querySelector(".total_erradas").innerHTML =
-    tentativas - respostas_corretas;
+    respostas_incorretas;
   container_resultado.querySelector(".porcentagem").innerHTML =
     porcentagem.toFixed(2) + "%";
   container_resultado.querySelector(".total_score").innerHTML =
@@ -211,7 +214,13 @@ function ver_dash() {
   container_dash.classList.remove("hide");
 }
 
+function desaparecer_pref () {
+  container_racas.classList.add("hide");
+  container_casa.classList.remove("hide");
+}
+
 window.onload = function () {
   container_casa.querySelector(".total_questoes").innerHTML =
     limite_de_questoes;
+    setTimeout(desaparecer_pref, 10000)
 };

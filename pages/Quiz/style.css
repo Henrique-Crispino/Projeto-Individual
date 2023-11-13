@@ -25,6 +25,15 @@ body {
   animation: fadeInRight 1s ease;
 }
 
+.container_racas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
 @keyframes fadeInRight {
   0% {
     transform: translateX(40px);
@@ -280,6 +289,10 @@ body {
 
 .grafico {
   width: 200px;
+}
+
+.grafico_racas {
+  width: 500px;
 }
 
 .grafico h3 {

@@ -1,3 +1,20 @@
+const g_preferido = document.getElementById("indice_raças");
+
+new Chart(g_preferido, {
+  type: "bar",
+  data: {
+    labels: ["Frísio", "Puro-Sangue Inglês", "Quarto de Milha", "Mustangue", "Warmblood Holandês", "Belga", "Puro Sangue Árabe", "Paint Horse", "Standard Breed Americano"],
+    datasets: [
+      {
+        label: "Votos",
+        data: [5, 1, 3, 4, 5, 8, 7, 8, 6, 10],
+        backgroundColor: ["red"],
+        borderWidth: 1,
+      },
+    ],
+  },
+});
+
 const g_facil = document.getElementById("indice_facil");
 
 new Chart(g_facil, {
@@ -6,7 +23,7 @@ new Chart(g_facil, {
     labels: ["Acertos", "Erros"],
     datasets: [
       {
-        label: "# of Votes",
+        label: "Respostas",
         data: [4, 1],
         backgroundColor: ["green", "red"],
         borderWidth: 1,
@@ -23,7 +40,7 @@ new Chart(g_medio, {
     labels: ["Acertos", "Erros"],
     datasets: [
       {
-        label: "# of Votes",
+        label: "Respostas",
         data: [4, 0, 0],
         backgroundColor: ["green", "red"],
         borderWidth: 1,
@@ -40,7 +57,7 @@ new Chart(indice_dificil, {
     labels: ["Acertos", "Erros"],
     datasets: [
       {
-        label: "# of Votes",
+        label: "Respostas",
         data: [1, 4, 1],
         backgroundColor: ["green", "red"],
         borderWidth: 1,
@@ -57,7 +74,7 @@ new Chart(indice_geral, {
     labels: ["Acertos", "Erros"],
     datasets: [
       {
-        label: "# of Votes",
+        label: "Respostas",
         data: [30, 8],
         backgroundColor: ["green", "red"],
         borderWidth: 1,

@@ -12,13 +12,21 @@
 </head>
 
 <body>
+    <div class="container_racas container_personalizado">
+        <h1>Você sabia?</h1>
+        <p>Estas são as 10º raças mais amadas pelos usuários de nosso site</p>
+        <div class="grafico_racas">
+            <div>
+                <canvas id="indice_raças"></canvas>
+            </div>
+        </div>
+    </div>
 
-    <div class="container_casa container_personalizado">
+    <div class="container_casa container_personalizado hide">
 
     <h3>Instrução:</h3>
     <p>Número total de questões: <span class="total_questoes"></span> sendo elas divididas em três dificuldades: <p>fácil, médio e díficil.</p></p>
     <p>O quiz não possui limite de tempo, tenha calma para responder.</p>
-    <p>Não é possível voltar atrás para responder questões já passadas.</p>
     <button type="button" class="btn" onclick="iniciar_quiz()">Iniciar Quiz</button>
     </div>
 
