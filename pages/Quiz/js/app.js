@@ -18,7 +18,7 @@ var questoes_disponiveis = [];
 var opcoes_disponiveis = [];
 var respostas_corretas = 0;
 var respostas_incorretas = 0;
-var tentativas = 0;
+var tentativa = 0;
 var acertos_faceis = 0;
 var acertos_medios = 0;
 var acertos_dificeis = 0;
@@ -111,8 +111,6 @@ function pegar_resultado(element) {
       container_opcoes.children[i].classList.add("correto");
     }
   }
-
-  tentativas++;
   opcoes_nao_clicaveis();
 }
 
@@ -154,6 +152,7 @@ function proxima() {
 }
 
 function fim_quiz() {
+  tentativa++;
   container_quiz.classList.add("hide");
   container_resultado.classList.remove("hide");
   resultado_quiz();
@@ -163,7 +162,6 @@ function resultado_quiz() {
   var porcentagem = (respostas_corretas / limite_de_questoes) * 100;
   container_resultado.querySelector(".total_questoes").innerHTML =
     limite_de_questoes;
-  container_resultado.querySelector(".total_tentativas").innerHTML = tentativas;
   container_resultado.querySelector(".total_corretas").innerHTML =
     respostas_corretas;
   container_resultado.querySelector(".total_erradas").innerHTML =
@@ -177,7 +175,7 @@ function resultado_quiz() {
 function resetar_quiz() {
   contador_questoes = 0;
   respostas_corretas = 0;
-  tentativas = 0;
+  tentativa = 0;
   acertos_faceis = 0;
   acertos_medios = 0;
   acertos_dificeis = 0;
