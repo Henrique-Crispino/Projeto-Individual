@@ -1,7 +1,9 @@
 var num_questao = document.querySelector(".num_questao");
 var texto_questao = document.querySelector(".texto_questao");
 var container_opcoes = document.querySelector(".container_opcoes");
-var container_indicador_respostas = document.querySelector(".indicador_respostas");
+var container_indicador_respostas = document.querySelector(
+  ".indicador_respostas"
+);
 var container_casa = document.querySelector(".container_casa");
 var container_quiz = document.querySelector(".container_quiz");
 var container_resultado = document.querySelector(".container_resultado");
@@ -136,10 +138,15 @@ function atualizar_indicador_resposta(markType) {
 }
 
 function proxima() {
-  if (contador_questoes === limite_de_questoes) {
-    fim_quiz();
+  var opcoesRespondidas = document.querySelectorAll(".opcao.ja_respondido");
+  if (opcoesRespondidas.length === container_opcoes.children.length) {
+    if (contador_questoes === limite_de_questoes) {
+      fim_quiz();
+    } else {
+      nova_questao();
+    }
   } else {
-    nova_questao();
+    alert("Por favor, responda à questão antes de passar para a próxima.");
   }
 }
 
