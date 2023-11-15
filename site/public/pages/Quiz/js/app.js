@@ -19,6 +19,8 @@ var opcoes_disponiveis = [];
 var respostas_corretas = 0;
 var respostas_incorretas = 0;
 var tentativa = 0;
+
+//Variáveis Globais de acertos e erros por dificuldade e geral
 var acertos_faceis = 0;
 var acertos_medios = 0;
 var acertos_dificeis = 0;
@@ -156,6 +158,38 @@ function fim_quiz() {
   container_quiz.classList.add("hide");
   container_resultado.classList.remove("hide");
   resultado_quiz();
+  fetch("/quiz/cadastrar/tentativa", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      // crie um atributo que recebe o valor recuperado aqui
+      // Agora vá para o arquivo routes/usuario.js
+      acertos_faceisServer: acertos_faceis,
+      erros_faceisServer: erros_faceis,
+      acertos_mediosServer: acertos_medios,
+      erros_mediosServer: erros_medios,
+      acertos_dificeisServer: acertos_dificeis,
+      erros_dificeisServer: erros_dificeis,
+      respostas_corretasServer: respostas_corretas,
+      respostas_incorretasServer: respostas_incorretas,
+      fkUsuarioServer: sessionStorage.ID_USUARIO 
+    }),
+  })
+    .then(function (resposta) {
+
+      console.log("resposta: ", resposta);
+      if (resposta.ok) {
+        console.log("Passou pelo Script do front")
+      } else {
+        throw "Houve um erro ao gravar a pontuação da partida no banco!";
+      }
+    })
+    .catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+    });
+  return false;
 }
 
 function resultado_quiz() {
@@ -175,6 +209,7 @@ function resultado_quiz() {
 function resetar_quiz() {
   contador_questoes = 0;
   respostas_corretas = 0;
+  respostas_incorretas = 0;
   tentativa = 0;
   acertos_faceis = 0;
   acertos_medios = 0;
@@ -210,6 +245,10 @@ function iniciar_quiz() {
 function ver_dash() {
   container_resultado.classList.add("hide");
   container_dash.classList.remove("hide");
+  grafico_facil(sessionStorage.ID_USUARIO);
+  grafico_medio(sessionStorage.ID_USUARIO);
+  grafico_dificil(sessionStorage.ID_USUARIO);
+  grafico_geral(sessionStorage.ID_USUARIO);
 }
 
 function desaparecer_pref () {
@@ -220,5 +259,5 @@ function desaparecer_pref () {
 window.onload = function () {
   container_casa.querySelector(".total_questoes").innerHTML =
     limite_de_questoes;
-    setTimeout(desaparecer_pref, 10000)
+    setTimeout(desaparecer_pref, 5000)
 };
