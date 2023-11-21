@@ -28,6 +28,7 @@
     <p>Número total de questões: <span class="total_questoes"></span> sendo elas divididas em três dificuldades: <p>fácil, médio e díficil.</p></p>
     <p>O quiz não possui limite de tempo, tenha calma para responder.</p>
     <button type="button" class="btn" onclick="iniciar_quiz()">Iniciar Quiz</button>
+    <button type="button" class="btn" onclick="ver_dash()">Análise de Partida</button>
     </div>
 
     <div class="container_quiz container_personalizado hide">
@@ -108,6 +109,7 @@
                 <h3>Perguntas fáceis:</h3>
                 <div>
                     <canvas id="indice_facil"></canvas>
+                    <p>Total de questões: <span class="span_total" id="span_facil"></span></p>
                 </div>
             </div>
 
@@ -115,6 +117,7 @@
                 <h3>Perguntas médias:</h3>
                 <div>
                     <canvas id="indice_medio"></canvas>
+                    <p>Total de questões: <span class="span_total" id="span_medio"></span></p>
                 </div>
             </div>
 
@@ -122,6 +125,7 @@
                 <h3>Perguntas difíceis:</h3>
                 <div>
                     <canvas id="indice_dificil"></canvas>
+                    <p>Total de questões: <span class="span_total" id="span_dificil"></span></p>
                 </div>
             </div>
 
@@ -129,6 +133,7 @@
                 <h3>Geral:</h3>
                 <div>
                     <canvas id="indice_geral"></canvas>
+                    <p>Total de questões: <span class="span_total" id="span_geral"></span></p>
                 </div>
             </div>
 

@@ -74,8 +74,11 @@ function grafico_facil(fkUsuario) {
 }
 
 function criar_g_facil(pontuacaoFacil) {
+  
   var qtd = [];
+  var total_facil = Number(pontuacaoFacil[0].acertosFaceis) + Number(pontuacaoFacil[0].errosFaceis);
 
+  span_facil.innerHTML = total_facil;
   qtd.push(pontuacaoFacil[0].acertosFaceis);
   qtd.push(pontuacaoFacil[0].errosFaceis);
 
@@ -122,7 +125,9 @@ function grafico_medio(fkUsuario) {
 
 function criar_g_medio(pontuacaoMedio) {
   var qtd = [];
+  var total_medio = Number(pontuacaoMedio[0].acertosMedios) + Number(pontuacaoMedio[0].errosMedios) 
 
+  span_medio.innerHTML = total_medio
   qtd.push(pontuacaoMedio[0].acertosMedios);
   qtd.push(pontuacaoMedio[0].errosMedios);
 
@@ -169,7 +174,9 @@ function grafico_dificil(fkUsuario) {
 
 function criar_g_dificil(pontuacaoDificil) {
   var qtd = [];
+  var total_dificil = Number(pontuacaoDificil[0].acertosDificeis) + Number(pontuacaoDificil[0].errosDificeis);
 
+  span_dificil.innerHTML = total_dificil
   qtd.push(pontuacaoDificil[0].acertosDificeis);
   qtd.push(pontuacaoDificil[0].errosDificeis);
 
@@ -216,6 +223,9 @@ function grafico_geral(fkUsuario) {
 
 function criar_g_geral(pontuacaoGeral) {
   var qtd = [];
+  var total_geral = Number(pontuacaoGeral[0].totalAcertos) + Number(pontuacaoGeral[0].totalErros)
+
+  span_geral.innerHTML = total_geral;
   qtd.push(pontuacaoGeral[0].totalAcertos);
   qtd.push(pontuacaoGeral[0].totalErros);
 

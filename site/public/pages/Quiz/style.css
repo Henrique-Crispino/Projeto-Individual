@@ -282,6 +282,10 @@ body {
   width: 200px;
 }
 
+.grafico p {
+  display: inline;
+}
+
 .grafico_racas {
   width: 500px;
 }

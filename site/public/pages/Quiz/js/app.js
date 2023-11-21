@@ -243,6 +243,7 @@ function iniciar_quiz() {
 }
 
 function ver_dash() {
+  container_casa.classList.add("hide");
   container_resultado.classList.add("hide");
   container_dash.classList.remove("hide");
   grafico_facil(sessionStorage.ID_USUARIO);
