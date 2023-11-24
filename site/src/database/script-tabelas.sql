@@ -1,11 +1,3 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
-
-/*
-comandos para mysql - banco local - ambiente de desenvolvimento
-*/
-
 create database projeto_individual;
 
 use projeto_individual;
@@ -64,6 +56,8 @@ constraint fkUsuario foreign key (fkUsuario) references usuario (idUsuario),
 constraint fkQuiz foreign key (fkQuiz) references quiz (idQuiz)
 );
 
+select * from usuario;
+
 SELECT email, idUsuario, nome, fkRaca FROM usuario WHERE email = 'asdadw@' AND senha = 'weofbqwubfyqrg';
         
 SELECT r.nome, COUNT(u.idUsuario) as quantidade
@@ -75,33 +69,19 @@ order by quantidade desc;
 select sum(t.acertos_facil) as acertosFaceis, sum(t.erros_facil) as errosFaceis 
 from tentativas t
 join usuario u on t.fkUsuario = u.idUsuario
-where u.idUsuario = 3;
+where u.idUsuario = 17;
 
 select sum(t.acertos_medio) as acertosMedios, sum(t.erros_medio) as errosMedios 
 from tentativas t
 join usuario u on t.fkUsuario = u.idUsuario
-where u.idUsuario = 3;
+where u.idUsuario = 17;
 
 select sum(t.acertos_dificil) as acertosDificeis, sum(t.erros_dificil) as errosDificeis 
 from tentativas t
 join usuario u on t.fkUsuario = u.idUsuario
-where u.idUsuario = 3;
+where u.idUsuario = 17;
 
 select sum(t.acertos_geral) as totalAcertos, sum(t.erros_geral) as totalErros
 from tentativas t
 join usuario u on t.fkUsuario = u.idUsuario
-where u.idUsuario = 3;
-/*
-comandos para criar usuário em banco de dados azure, sqlserver,
-com permissão de insert + update + delete + select
-*/
-
-CREATE USER [usuarioParaAPIWebDataViz_datawriter_datareader]
-WITH PASSWORD = '#Gf_senhaParaAPIWebDataViz',
-DEFAULT_SCHEMA = dbo;
-
-EXEC sys.sp_addrolemember @rolename = N'db_datawriter',
-@membername = N'usuarioParaAPIWebDataViz_datawriter_datareader';
-
-EXEC sys.sp_addrolemember @rolename = N'db_datareader',
-@membername = N'usuarioParaAPIWebDataViz_datawriter_datareader';
+where u.idUsuario = 17;
