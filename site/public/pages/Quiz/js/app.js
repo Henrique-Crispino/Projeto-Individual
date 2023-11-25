@@ -1,9 +1,7 @@
 var num_questao = document.querySelector(".num_questao");
 var texto_questao = document.querySelector(".texto_questao");
 var container_opcoes = document.querySelector(".container_opcoes");
-var container_indicador_respostas = document.querySelector(
-  ".indicador_respostas"
-);
+var container_indicador_respostas = document.querySelector(".indicador_respostas");
 var container_casa = document.querySelector(".container_casa");
 var container_quiz = document.querySelector(".container_quiz");
 var container_resultado = document.querySelector(".container_resultado");
@@ -28,6 +26,7 @@ var erros_faceis = 0;
 var erros_medios = 0;
 var erros_dificeis = 0;
 
+// Preenche o array questoes_disponiveis com as questões do quiz
 function set_questoes_disponiveis() {
   var total_questoes = quiz.length;
 
@@ -36,6 +35,7 @@ function set_questoes_disponiveis() {
   }
 }
 
+// Gera uma nova questão para o quiz
 function nova_questao() {
   var indice_questoes =
     questoes_disponiveis[
@@ -80,6 +80,7 @@ function nova_questao() {
   contador_questoes++;
 }
 
+// Avalia a resposta selecionada pelo usuário
 function pegar_resultado(element) {
   var id = Number(element.id);
 
@@ -91,7 +92,7 @@ function pegar_resultado(element) {
       acertos_faceis++;
     } else if (dificuldade === "Média") {
       acertos_medios++;
-    } else if (dificuldade === "Díficil") {
+    } else if (dificuldade === "Difícil") {
       acertos_dificeis++;
     }
   } else {
@@ -102,7 +103,7 @@ function pegar_resultado(element) {
       erros_faceis++;
     } else if (dificuldade === "Média") {
       erros_medios++;
-    } else if (dificuldade === "Díficil") {
+    } else if (dificuldade === "Difícil") {
       erros_dificeis++;
     }
   }
@@ -116,6 +117,7 @@ function pegar_resultado(element) {
   opcoes_nao_clicaveis();
 }
 
+// Desabilita a capacidade de clicar nas opções após o usuário ter respondido a questão
 function opcoes_nao_clicaveis() {
   var opcao_len = container_opcoes.children.length;
 
@@ -124,6 +126,7 @@ function opcoes_nao_clicaveis() {
   }
 }
 
+// Cria indicadores visuais para mostrar quais questões foram respondidas corretamente ou incorretamente
 function indicador_respostas() {
   container_indicador_respostas.innerHTML = "";
   var total_questoes = limite_de_questoes;
@@ -134,12 +137,14 @@ function indicador_respostas() {
   }
 }
 
+// Atualiza o indicador visual de resposta (certo ou errado)
 function atualizar_indicador_resposta(markType) {
   container_indicador_respostas.children[contador_questoes - 1].classList.add(
     markType
   );
 }
 
+// Avança para a próxima questão ou encerra o quiz se todas as questões foram respondidas
 function proxima() {
   var opcoesRespondidas = document.querySelectorAll(".opcao.ja_respondido");
   if (opcoesRespondidas.length === container_opcoes.children.length) {
@@ -149,10 +154,11 @@ function proxima() {
       nova_questao();
     }
   } else {
-    alert("Por favor, responda à questão antes de passar para a próxima.");
+    alert("Por favor, responda a questão antes de passar para a próxima.");
   }
 }
 
+// Finaliza o quiz, exibe os resultados e envia dados ao servidor
 function fim_quiz() {
   tentativa++;
   container_quiz.classList.add("hide");
@@ -164,8 +170,6 @@ function fim_quiz() {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      // crie um atributo que recebe o valor recuperado aqui
-      // Agora vá para o arquivo routes/usuario.js
       acertos_faceisServer: acertos_faceis,
       erros_faceisServer: erros_faceis,
       acertos_mediosServer: acertos_medios,
@@ -192,6 +196,7 @@ function fim_quiz() {
   return false;
 }
 
+// Exibe os resultados finais do quiz
 function resultado_quiz() {
   var porcentagem = (respostas_corretas / limite_de_questoes) * 100;
   container_resultado.querySelector(".total_questoes").innerHTML =
@@ -206,6 +211,7 @@ function resultado_quiz() {
     respostas_corretas + " / " + limite_de_questoes;
 }
 
+// Reinicia as variáveis do quiz
 function resetar_quiz() {
   contador_questoes = 0;
   respostas_corretas = 0;
@@ -220,6 +226,7 @@ function resetar_quiz() {
   questoes_disponiveis = [];
 }
 
+// Reinicia o quiz para uma nova tentativa
 function tentar_novamente() {
   container_resultado.classList.add("hide");
   container_quiz.classList.remove("hide");
@@ -227,6 +234,7 @@ function tentar_novamente() {
   iniciar_quiz();
 }
 
+// Volta para a tela inicial
 function volte_inicio() {
   container_resultado.classList.add("hide");
   container_dash.classList.add("hide");
@@ -234,6 +242,7 @@ function volte_inicio() {
   resetar_quiz();
 }
 
+// Inicia o quiz
 function iniciar_quiz() {
   container_casa.classList.add("hide");
   container_quiz.classList.remove("hide");
@@ -242,6 +251,7 @@ function iniciar_quiz() {
   indicador_respostas();
 }
 
+// Exibe o painel de controle (dashboard)
 function ver_dash() {
   container_casa.classList.add("hide");
   container_resultado.classList.add("hide");
@@ -252,11 +262,13 @@ function ver_dash() {
   grafico_geral(sessionStorage.ID_USUARIO);
 }
 
+// Oculta a seção de preferências após 5 segundos
 function desaparecer_pref () {
   container_racas.classList.add("hide");
   container_casa.classList.remove("hide");
 }
 
+// Evento acionado quando a página é completamente carregada
 window.onload = function () {
   container_casa.querySelector(".total_questoes").innerHTML =
     limite_de_questoes;

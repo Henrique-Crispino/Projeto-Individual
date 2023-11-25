@@ -1,504 +1,274 @@
 //Vetor de objetos
 var quiz = [
-
-  //Perguntas fáceis
+  //Começo fáceis
   {
-    q: "Qual é a disciplina de equitação que envolve saltos sobre obstáculos?",
-    opcoes: ["Adestramento", "Polo", "Salto", "Rédeas"],
-    resposta: 2,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "Qual é o nome da competição de equitação que envolve três disciplinas: adestramento, cross-country e salto?",
-    opcoes: ["Copa do Mundo", "Tríplice Coroa", "Pentatlo Moderno", "Eventing"],
-    resposta: 3,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "Qual cavalo é conhecido por ser uma raça originária da Espanha e muitas vezes associado à equitação clássica?",
-    opcoes: ["Pônei Shetland", "Puro-sangue Árabe", "Andaluz", "Mustang"],
-    resposta: 2,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: 'Em que esporte equestre os cavaleiros competem em um campo circular com o objetivo de marcar gols contra a equipe adversária?',
-    opcoes: [
-      "Hipismo Paralímpico",
-      "Corrida de Barris",
-      "Equitação a Rédeas",
-      "Polo",
-    ],
-    resposta: 3,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "Em que país o polo é um esporte muito popular?",
-    opcoes: ["Estados Unidos", "Reino Unido", "Brasil", "Rússia"],
-    resposta: 1,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: 'O que é um obstáculo de salto usado em competições de salto a cavalo, composto por uma série de barras que podem ser ajustadas em altura?',
-    opcoes: ["Trave de Equilíbrio", "Portão", "Cavalo de Balanço", "Obstáculo de Salto"],
-    resposta: 3,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "Qual é o esporte equestre que envolve a habilidade de treinar um cavalo para executar movimentos complexos e elegantes?",
-    opcoes: ["Salto", "Adestramento", "Corrida de Barris", "Enduro"],
-    resposta: 1,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "Qual é o nome do evento de equitação onde os competidores correm uma trilha longa e desafiadora através do campo?",
-    opcoes: ["Derby de Polo", "Corrida de Barris", "Enduro", "Pentatlo Moderno"],
-    resposta: 2,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "Qual cavalo é conhecido por sua velocidade e é frequentemente usado em corridas de puro-sangue?",
-    opcoes: ["Clydesdale", "Puro-sangue Inglês", "Shire", "Appaloosa"],
-    resposta: 1,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "Qual é a disciplina de equitação em que os cavaleiros competem em jogos a cavalo, como corrida de sacos e corrida de anel?",
-    opcoes: ["Polo", "Cowboy Mounted Shooting", "Esportes a Cavalo", "Ginástica Equestre"],
-    resposta: 2,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "Em que país o esporte equestre chamado 'charrería' é tradicionalmente praticado?",
-    opcoes: [
-      "Espanha",
-      "Estados Unidos",
-      "México",
-      "França",
-    ],
-    resposta: 2,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "Qual destes não é um equipamento de montaria equestre?",
-    opcoes: [
-      "Espora",
-      "Ferradura",
-      "Espaçador",
-      "Bridão",
-    ],
-    resposta: 2,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "O que é o 'trote' em equitação?",
-    opcoes: ["Uma corrida de longa distância", "Um tipo de salto alto", "Um passo intermediário entre o passo e o galope", "Um tipo de salto sem obstáculos"],
-    resposta: 2,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "Qual é o termo usado para descrever um cavalo que tem um casco branco com manchas escuras?",
-    opcoes: ["Overo", "Tobiano", "Palomino", "Pampa"],
+    q: "Cavalos têm uma visão binocular, o que significa que conseguem enxergar um objeto com ambos os olhos ao mesmo tempo",
+    opcoes: ["Verdadeiro", "Falso"],
     resposta: 0,
     dificuldade: "Fácil",
   },
 
   {
-    q: "O termo 'Hípica' é geralmente associado a quais tipos de esportes equestres?",
+    q: 'A modalidade de hipismo "salto" consiste em percorrer um percurso de obstáculos no menor tempo possível.',
+    opcoes: ["Verdadeiro", "Falso"],
+    resposta: 1,
+    dificuldade: "Fácil",
+  },
+
+  {
+    q: "O esporte conhecido como polo é tradicionalmente praticado com elefantes em vez de cavalos.",
+    opcoes: ["Verdadeiro", "Falso"],
+    resposta: 1,
+    dificuldade: "Fácil",
+  },
+
+  {
+    q: "Qual destas não é uma raça de cavalo?",
+    opcoes: ["Puro-sangue inglês", "Quarto de Milha", "Shiba Inu", "Árabe"],
+    resposta: 2,
+    dificuldade: "Fácil",
+  },
+
+  {
+    q: "Qual é o nome do esporte equestre em que os participantes devem realizar uma série de movimentos pré-determinados em uma ordem específica?",
+    opcoes: ["Salto", "Adestramento", "Enduro", "Laço"],
+    resposta: 1,
+    dificuldade: "Fácil",
+  },
+
+  {
+    q: "Em que país o Kentucky Derby, uma famosa corrida de cavalos, é realizado anualmente?",
+    opcoes: ["França", "Estados Unidos", "Inglaterra", "Austrália"],
+    resposta: 1,
+    dificuldade: "Fácil",
+  },
+
+  {
+    q: "Qual é a peça de equipamento equestre usada para controlar um cavalo, geralmente conectada à embocadura?",
+    opcoes: ["Sela", "Estribo", "Rédea", "Cabeçada"],
+    resposta: 2,
+    dificuldade: "Fácil",
+  },
+
+  {
+    q: 'O que é a "ferroada de cavalo"?',
     opcoes: [
-      "Polo e Corrida de Barris",
-      "Adestramento e Salto",
-      "Enduro e Rédeas",
-      "Hipismo Paralímpico e Pentatlo Moderno",
+      "Um tipo de coice",
+      "Uma marca na pele causada por espinhos",
+      "Uma alergia à saliva de cavalo",
+      "A pegada de um cavalo na lama",
     ],
     resposta: 1,
     dificuldade: "Fácil",
   },
 
   {
-    q: "Qual é o esporte equestre em que os cavaleiros competem em uma série de eventos de velocidade e habilidade?",
-    opcoes: ["Enduro", "Rédeas", "Cowboy Mounted Shooting", "Ginástica Equestre"],
+    q: "Qual é o nome do esporte equestre que envolve a prática de saltos em obstáculos naturais, como rios e troncos de árvores?",
+    opcoes: ["Salto", "Concurso Completo de Equitação (CCE)", "Enduro", "Polo"],
+    resposta: 1,
+    dificuldade: "Fácil",
+  },
+
+  {
+    q: 'O que é um "galope" no contexto dos cavalos?',
+    opcoes: [
+      "Um tipo de sela",
+      "Uma raça de cavalo",
+      "Uma velocidade de corrida",
+      "Um tipo de alimentação equina",
+    ],
     resposta: 2,
     dificuldade: "Fácil",
   },
+  //Fim fáceis
 
+  //Início médias
   {
-    q: "Quem é o cavaleiro de salto a cavalo mais decorado da história, com inúmeras medalhas olímpicas?",
-    opcoes: ["Beezie Madden", "Rodrigo Pessoa", "Michael Jung", "Ludger Beerbaum"],
-    resposta: 1,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "Qual é o termo usado para descrever o ato de escovar o pelo de um cavalo para mantê-lo limpo e saudável?",
-    opcoes: ["Escovação", "Escovação a Seco", "Escovação a Molhado", "Escovação a Vácuo"],
-    resposta: 1,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "Qual é o nome da competição de hipismo que reúne os melhores saltadores do mundo em uma série de etapas?",
-    opcoes: ["Grande Prêmio de Saltos", "Campeonato Mundial de Salto", "Copa das Nações", "Copa do Mundo de Salto"],
-    resposta: 3,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "Qual é o esporte equestre em que os cavaleiros demonstram sua habilidade em laçar um boi em movimento?",
-    opcoes: ["Adestramento", "Laço de Bezerro", "Rédeas", "Corrida de Barris"],
-    resposta: 1,
-    dificuldade: "Fácil",
-  },
-
-  {
-    q: "O termo dressage é frequentemente associado a qual esporte equestre?",
-    opcoes: ["Polo", "Salto", "Adestramento", "Rédeas"],
-    resposta: 2,
+    q: "O cavalo Mustang é uma raça nativa da América do Norte?",
+    opcoes: ["Verdadeiro", "Falso"],
+    resposta: 0,
     dificuldade: "Média",
   },
 
   {
-    q: 'Qual é a disciplina de equitação em que os cavaleiros tem que dar a volta em três tambores colocados em formato de trevo na arena?',
+    q: 'O termo "dressage" refere-se a uma forma específica de equitação utilizada em competições de salto.',
+    opcoes: ["Verdadeiro", "Falso"],
+    resposta: 1,
+    dificuldade: "Média",
+  },
+
+  {
+    q: "O evento de tríplice coroa no turfe consiste em três corridas: o Kentucky Derby, o Preakness Stakes e o Belmont Stakes.",
+    opcoes: ["Verdadeiro", "Falso"],
+    resposta: 0,
+    dificuldade: "Média",
+  },
+
+  {
+    q: "Qual é a altura média de um cavalo de corrida Puro-sangue inglês?",
+    opcoes: [
+      "14.2 a 15.2 mãos",
+      "15.3 a 16.3 mãos",
+      "16.4 a 17.4 mãos",
+      "17.5 a 18.5 mãos",
+    ],
+    resposta: 1,
+    dificuldade: "Média",
+  },
+
+  {
+    q: "Qual desses eventos equestres faz parte do pentatlo moderno?",
     opcoes: [
       "Salto",
-      "Corrida de Barris",
-      "Rédeas",
-      "Polo",
-    ],
-    resposta: 1,
-    dificuldade: "Média",
-  },
-
-  {
-    q: "O que é um galope na equitação?",
-    opcoes: ["Um passo lento", "Um passo médio", "Um passo rápido", "Um tipo de salto"],
-    resposta: 2,
-    dificuldade: "Média",
-  },
-
-  {
-    q: 'Qual é o esporte equestre em que os cavaleiros competem em uma série de eventos de perícia, como cortar o gado?',
-    opcoes: [
-      "Laço de Bezerro",
-      "Ginástica Equestre",
-      "Cowboy Mounted Shooting",
+      "Concurso Completo de Equitação (CCE)",
       "Enduro",
+      "Adestramento",
     ],
-    resposta: 0,
+    resposta: 3,
     dificuldade: "Média",
   },
 
   {
-    q: 'Qual é a parte do equipamento de montaria que é colocada na cabeça do cavalo e é usada para controlá-lo?',
+    q: 'Qual é a diferença entre um "galope" e um "trote" no contexto da equitação?',
     opcoes: [
-      "Sela",
-      "Bridão",
-      "Espora",
-      "Rédea",
-    ],
-    resposta: 1,
-    dificuldade: "Média",
-  },
-
-  {
-    q: 'Qual é o termo usado para descrever um cavalo de pêlo amarelo-dourado com crina e cauda brancas?',
-    opcoes: ["Appaloosa", "Tobiano", "Palomino", "Pampa"],
-    resposta: 2,
-    dificuldade: "Média",
-  },
-
-  {
-    q: 'O salto é uma disciplina de equitação que envolve corridas em alta velocidade.',
-    opcoes: [
-      "Verdadeiro",
-      "Falso",
-    ],
-    resposta: 1,
-    dificuldade: "Média",
-  },
-
-  {
-    q: "O puro-sangue árabe é uma raça de cavalo conhecida por sua resistência em corridas de longa distância.",
-    opcoes: ["Verdadeiro", "Falso"],
-    resposta: 0,
-    dificuldade: "Média",
-  },
-
-  {
-    q: 'O hipismo paralímpico é uma categoria de esportes equestres adaptada para atletas com deficiências físicas.',
-    opcoes: [
-      "Verdadeiro", "Falso"
-    ],
-    resposta: 0,
-    dificuldade: "Média",
-  },
-
-  {
-    q: "Um casco de cavalo deve ser cortado regularmente para evitar doenças nos cascos.",
-    opcoes: ["Verdadeiro", "Falso"],
-    resposta: 0,
-    dificuldade: "Média",
-  },
-
-  {
-    q: 'A equitação a rédeas é uma disciplina de hipismo que se originou na França.',
-    opcoes: [
-      "Verdadeiro", "Falso",
-    ],
-    resposta: 1,
-    dificuldade: "Média",
-  },
-
-  {
-    q: "O cowboy mounted shooting é uma disciplina de equitação em que os cavaleiros atiram em alvos enquanto montam a cavalo.",
-    opcoes: ["Verdadeiro","Falso"],
-    resposta: 0,
-    dificuldade: "Média",
-  },
-
-  {
-    q: "A maioria das competições de salto a cavalo acontece em pistas retas.",
-    opcoes: [
-      "Verdadeiro", "Falso"
-    ],
-    resposta: 1,
-    dificuldade: "Média",
-  },
-
-  {
-    q: "O termo mangalarga se refere a uma raça de cavalo originária do Brasil.",
-    opcoes: ["Verdadeiro", "Falso"],
-    resposta: 0,
-    dificuldade: "Média",
-  },
-
-  {
-    q: 'Os eventos de enduro equestre podem cobrir grandes distâncias em terrenos variados.',
-    opcoes: ["Verdadeiro", "Falso"],
-    resposta: 0,
-    dificuldade: "Média",
-  },
-
-  {
-    q: "O termo cavalo de sela se refere a um cavalo utilizado principalmente para tração pesada.",
-    opcoes: ["Verdadeiro", "Falso"],
-    resposta: 1,
-    dificuldade: "Média",
-  },
-
-  {
-    q: 'O que é uma "estrebaria" em termos de equitação?',
-    opcoes: [
-      "Um lugar para limpar o cavalo",
-      "Um tipo de sela",
-      "Um abrigo para cavalos",
-      "Um movimento de salto",
+      "O galope é uma marcha lenta, enquanto o trote é rápido.",
+      "O galope é uma marcha rápida, enquanto o trote é lento.",
+      "O galope tem quatro tempos, enquanto o trote tem dois tempos.",
+      "O galope é uma marcha lateral, enquanto o trote é uma marcha diagonal.",
     ],
     resposta: 2,
     dificuldade: "Média",
   },
 
   {
-    q: "Qual é o termo para a prática de montar um cavalo em ritmo acelerado?",
-    opcoes: ["Trote", "Galope", "Andadura", "Marcha"],
+    q: "Qual é a função do estribo na equitação?",
+    opcoes: [
+      "Controlar a direção do cavalo",
+      "Dar equilíbrio ao cavaleiro",
+      "Proteger os cascos do cavalo",
+      "Aumentar a velocidade do cavalo",
+    ],
     resposta: 1,
     dificuldade: "Média",
   },
 
   {
-    q: "Em que esporte equestre os cavaleiros correm em uma pista oval?",
-    opcoes: ["Polo", "Rédeas", "Enduro", "Corrida de cavalos"],
+    q: 'Em que país originou-se a modalidade de equitação conhecida como "doma vaquera"?',
+    opcoes: ["México", "Itália", "França", "Espanha"],
     resposta: 3,
     dificuldade: "Média",
   },
 
   {
-    q: "Em que disciplina equestre os cavalos executam uma série de movimentos de alta escola, incluindo saltos no lugar e meia-volta?",
-    opcoes: ["Doma clássica", "CCE", "Rédeas", "Corrida de cavalos"],
-    resposta: 0,
+    q: "Qual é o nome da corrida de cavalos mais longa do mundo, com uma distância de mais de 5.600 quilômetros?",
+    opcoes: [
+      "Kentucky Derby",
+      "Grand National",
+      "Melbourne Cup",
+      "Mongol Derby",
+    ],
+    resposta: 3,
     dificuldade: "Média",
   },
 
   {
-    q: "Qual é o termo para a área em uma pista de corrida onde os cavalos correm em círculos antes de começar a corrida?",
-    opcoes: ["Box de largada", "Linha de chegada", "Curva", "Reta final"],
-    resposta: 2,
-    dificuldade: "Díficil",
-  },
-
-  {
-    q: "Qual é o nome da peça que cobre as costas do cavalo e fornece suporte para o cavaleiro?",
-    opcoes: ["Estribo", "Sela", "Barrigueira", "Cabresto"],
-    resposta: 1,
-    dificuldade: "Díficil",
-  },
-
-  {
-    q: "Qual é o termo para o ato de controlar o cavalo com rédeas?",
-    opcoes: ["Doma clássica", "Enduro", "Rédeas", "Hipismo"],
-    resposta: 2,
-    dificuldade: "Díficil",
-  },
-
-  {
-    q: 'Que parte do cavalo é frequentemente coberta por uma "cabeçada"?',
-    opcoes: ["Cabeça", "Casco", "Pescoço", "Boca"],
-    resposta: 0,
-    dificuldade: "Díficil",
-  },
-
-  {
-    q: 'O que é um "paddock" em termos de equitação?',
+    q: 'O que significa a expressão "amblar" no contexto dos cavalos?',
     opcoes: [
-      "Uma competição de salto",
-      "Um pequeno cercado para cavalos",
-      "Um tipo de cela",
-      "Uma corrida de longa distância",
+      "Uma forma de galope",
+      "Uma marcha lateral",
+      "Um tipo de salto",
+      "Um movimento de trote",
     ],
     resposta: 1,
-    dificuldade: "Díficil",
+    dificuldade: "Média",
   },
+  //Fim médias
+
+  //Início Difíceis
 
   {
-    q: "Qual é o termo para a ferramenta usada para limpar os cascos de um cavalo?",
-    opcoes: ["Escova", "Espora", "Ferradura", "Picadeira"],
-    resposta: 2,
-    dificuldade: "Díficil",
-  },
-
-  {
-    q: 'O que é um "trote" em equitação?',
-    opcoes: [
-      "Um movimento lento do cavalo",
-      "Um som feito pelo cavaleiro",
-      "Um tipo de rédea",
-      "Um cavalo de grande porte",
-    ],
+    q: "O cavalo de corrida mais rápido registrado atingiu uma velocidade de mais de 88 km/h.",
+    opcoes: ["Verdadeiro", "Falso"],
     resposta: 0,
-    dificuldade: "Díficil",
+    dificuldade: "Difícil",
   },
 
   {
-    q: 'O que é uma "cauda de cavalo"?',
-    opcoes: [
-      "Uma raça de cavalo",
-      "Um tipo de penteado",
-      "Uma competição de salto",
-      "Uma peça de arreio",
-    ],
+    q: 'O esporte equestre chamado "enduro" envolve provas de resistência de longa distância, geralmente de 160 km ou mais.',
+    opcoes: ["Verdadeiro", "Falso"],
+    resposta: 0,
+    dificuldade: "Difícil",
+  },
+
+  {
+    q: 'A modalidade de hipismo conhecida como "coudelaria" é focada na reprodução seletiva de cavalos para melhorar características específicas.',
+    opcoes: ["Verdadeiro", "Falso"],
     resposta: 1,
-    dificuldade: "Díficil",
+    dificuldade: "Difícil",
   },
 
   {
-    q: "Qual é o termo para a estrutura que segura a sela nas costas do cavalo?",
-    opcoes: ["Barrigueira", "Estribo", "Cabeçada", "Rédea"],
-    resposta: 0,
-    dificuldade: "Díficil",
+    q: "Qual é a altura mínima exigida para um cavalo de competição no esporte de salto?",
+    opcoes: ["14.2 mãos", "15.2 mãos", "16 mãos", "17 mãos"],
+    resposta: 2,
+    dificuldade: "Difícil",
   },
 
   {
-    q: 'O que é o "sprint final" em corridas de cavalos?',
+    q: 'O que é a "sela de rédeas" no contexto do hipismo ocidental?',
     opcoes: [
-      "A parte mais lenta da corrida",
-      "Uma corrida de longa distância",
-      "O treinamento inicial",
-      "A parte mais rápida da corrida",
+      "Uma sela com rédeas mais curtas para maior controle",
+      "Uma sela usada exclusivamente em competições de rédeas",
+      "Uma sela de alta tecnologia com sensores de movimento",
+      "Uma sela específica para cavalos de rédeas árabes",
     ],
+    resposta: 0,
+    dificuldade: "Difícil",
+  },
+
+  {
+    q: "Qual é o nome do padrão de pelagem de um cavalo que tem manchas brancas em uma base escura, semelhante a um dálmata?",
+    opcoes: ["Tobiano", "Tobiano", "Palomino", "Appaloosa"],
     resposta: 3,
-    dificuldade: "Díficil",
+    dificuldade: "Difícil",
   },
 
   {
-    q: "Qual é o termo para um cavalo com uma pelagem branca e preta?",
-    opcoes: ["Alazão", "Malhado", "Pampa", "Baio"],
+    q: 'Em qual país o esporte equestre chamado "charreria" é mais tradicionalmente praticado?',
+    opcoes: ["Argentina", "México", "Espanha", "França"],
     resposta: 1,
-    dificuldade: "Díficil",
+    dificuldade: "Difícil",
   },
 
   {
-    q: 'O que é um "jóquei"?',
+    q: 'O que é a "voltige", uma disciplina equestre praticada internacionalmente?',
     opcoes: [
-      "Um tipo de corrida",
-      "Um tipo de cavalo",
-      "Um piloto de corrida de cavalos",
-      "Um treinador de cavalos",
+      "Corrida de cavalos em linha reta",
+      "Salto sobre obstáculos em alta velocidade",
+      "Ginástica acrobática em cima de um cavalo em movimento",
+      "Adestramento avançado com movimentos coreografados",
     ],
     resposta: 2,
-    dificuldade: "Díficil",
+    dificuldade: "Difícil",
   },
 
   {
-    q: "Qual é o termo para o espaço onde os cavalos vivem e são cuidados?",
-    opcoes: ["Circuito", "Hipódromo", "Haras", "Sela"],
+    q: "Qual é a altura média do obstáculo mais alto em competições de salto de obstáculos?",
+    opcoes: ["1 metro", "1,30 metros", "1,60 metros", "2 metros"],
     resposta: 2,
-    dificuldade: "Díficil",
+    dificuldade: "Difícil",
   },
 
   {
-    q: 'O que é o "passo" em equitação?',
+    q: 'O que é a "sela vaquera" no contexto dos esportes equestres?',
     opcoes: [
-      "Um movimento rápido do cavalo",
-      "Um tipo de alimentação",
-      "Um movimento lento do cavalo",
-      "Um tipo de cavalo",
+      "Uma sela exclusiva para vaqueiros",
+      "Uma sela utilizada em competições de rédeas",
+      "Uma sela de salto com design ocidental",
+      "Uma sela usada em competições de corrida de barris",
     ],
-    resposta: 2,
-    dificuldade: "Díficil",
+    resposta: 0,
+    dificuldade: "Difícil",
   },
-
-  {
-    q: 'O que é um "trote" em equitação?',
-    opcoes: [
-      "Um movimento rápido do cavalo",
-      "Um som feito pelo cavaleiro",
-      "Um movimento lento do cavalo",
-      "Um tipo de rédea",
-    ],
-    resposta: 2,
-    dificuldade: "Díficil",
-  },
-
-  {
-    q: 'O que é uma "prova de obstáculos"?',
-    opcoes: [
-      "Um teste de resistência",
-      "Uma competição de salto",
-      "Um tipo de corrida",
-      "Uma exposição de cavalos",
-    ],
-    resposta: 1,
-    dificuldade: "Díficil",
-  },
-
-  {
-    q: "Qual é o termo para a área onde os cavalos se exercitam e são treinados?",
-    opcoes: ["Barrigueira", "Circuito", "Picadeira", "Haras"],
-    resposta: 2,
-    dificuldade: "Díficil",
-  },
-
-  {
-    q: 'O que é o "galope"?',
-    opcoes: [
-      "Um movimento lento do cavalo",
-      "Um tipo de corrida",
-      "Um cavalo de grande porte",
-      "Uma peça de arreio",
-    ],
-    resposta: 1,
-    dificuldade: "Díficil",
-  },
+  //Fim Difícil
 ];
